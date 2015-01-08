@@ -1,0 +1,537 @@
+/*
+Theme Name: Wide Eye Creative
+Theme URI: http://www.wideeyecreative.com
+Author: Wide Eye Creative
+Author URI: http://www.wideeyecreative.com
+Description: Custom Wide Eye Creative Theme for WordPress
+Version: 1.0
+*/
+
+/*=============================
+=            FONTS            =
+=============================*/
+
+/**
+ *	Name: 	Gotham Condensed Book
+ *	Code: 	font-family: 'Gotham Cond SSm A', 'Gotham Cond SSm B';
+ *	Sizes: 	400, 600
+ */
+/**
+ *	Name: 	Gotham
+ *	Code: 	font-family: 'Gotham SSm A', 'Gotham SSm B';
+ *	Sizes: 	500
+ */
+/**
+ *	Name: 	Whitney
+ *	Code: 	font-family: 'Whitney SSm A', 'Whitney SSm B';
+ *	Sizes:
+ */
+.navbar {
+
+    display: block;
+    position: fixed;
+}
+a,a:hover,a:focus,a:active,a:visited {
+	color:#ffffff;
+}
+
+#frivolo {
+	padding-top:4.5em;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+h1, h2, h3, h4, h5 {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+		text-shadow: 1px 1px 0px black;
+}
+#protetto h3 {
+			text-shadow: 0px 0px 0px black;
+}
+h4 {
+			text-shadow: 0px 0px 0px black;
+}
+section h2 {
+	width: auto;
+	font-size: 3em;
+	font-weight: 700;
+}
+section h3 {
+	width: auto;
+	font-weight: 400;
+}
+section h1 {
+	text-transform: uppercase;
+	font-weight: normal;
+	margin: 0;
+	padding: 5px 10px;
+ border: 3px solid #;
+	background-color: #FF161A;
+	text-shadow: 2px 2px 0px #840002;
+	color: #ffffff;
+	display: inline-block;
+	position: relative;
+	letter-spacing: 0.2em;
+}
+#page-top #home {
+	background-image: url(../img/konstru.jpg);
+	padding-top: 4em;
+	padding-bottom: 2em;
+	background-color: #FA1A24;
+	background-size: cover;
+}
+section {
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+.section-header {
+	color: #ffffff;
+	text-align: right;
+	margin-bottom: 2em;
+	padding-right: 1em;
+	background-image: url(../img/red.png);
+}
+.section-header p {
+	font-family: 'Gotham SSm A', 'Gotham SSm B';
+	color: #ffffff;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+header h1 {
+	font-family: 'Voltaire', sans-serif;
+	color: #ffffff;
+	letter-spacing: -0.03em;
+	text-shadow: 2px 2px 0px black;
+}
+body {
+	font-family: 'Whitney SSm A', 'Whitney SSm B';
+	text-shadow: 0 0 1px rgba(0,0,0,0.3);
+	font-size: 2em;
+	background-image: url(../img/light_toast.png);
+	background-repeat: repeat;
+	color: #4a5666;
+}
+header {
+}
+
+.skillsframe {
+	background-color:#ffccaa;
+}
+
+.drappo {
+  border: 2px solid;
+  display: inline-block;
+  position: relative;
+  padding: 0 40px;
+  margin: 20px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  border-right: 0;
+  border-left: 0;
+}
+.drappo:after,
+.drappo:before {
+  border: 2px solid;
+  height: 30px;
+  width: 30px;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -2px;
+  transform: rotate(45deg);
+}
+.drappo:after {
+  right: -23px;
+}
+.drappo:before {
+  left: -23px;
+}
+
+.rotoskills {
+	display:inline;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	font-size: 2.5em;
+	padding: 5px 20px;
+	margin:0px;
+	background-image: url(../img/red.png);
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #ffffff;
+	text-shadow: 2px 2px 0px black;
+	letter-spacing: normal;
+	-webkit-box-shadow: 2px 2px 0px 0px #000000;
+	box-shadow: 2px 2px 0px 0px #000000;
+}
+
+#stretchme {
+	-webkit-transform: rotate(-3deg) skew(-3deg, 0);
+	-moz-transform: rotate(-3deg) skew(-3deg, 0);
+	-ms-transform: rotate(-3deg) skew(-3deg, 0);
+	-o-transform: rotate(-3deg) skew(-3deg, 0);
+	transform: rotate(-3deg) skew(-3deg, 0);
+}
+#title {
+	width: 100%;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+.serviceblock {
+	color: white;
+	width: 20%;
+	padding: 1em;
+	margin: 0px;
+	background-color: #84B929;
+	float: left;
+	text-transform: uppercase;
+	font-family: 'League Gothic', sans-serif;
+	text-shadow: 1px 1px 0px black;
+	text-align: center;
+}
+.serviceblock .description {
+	font-weight: 500;
+	text-transform: none;
+	border-width: thin;
+	border-top-color: #000000;
+	border-top-style: solid;
+	display: none;
+}
+.servicedata {
+	color: white;
+	width: 20%;
+	padding: 1em;
+	margin: 0px;
+	background-color: #84B929;
+	float: left;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-shadow: 1px 1px 0px black;
+}
+.serviceblock .testo {
+	clear: both;
+}
+.serviceblock img {
+	width: 20%;
+	margin: 0px;
+	padding: 0px;
+	clear: both;
+	background-color: #ffffff;
+	border-radius: 128px;
+	margin-bottom: 1em;
+	-webkit-box-shadow: 2px 2px 0px 0px #000000;
+	box-shadow: 2px 2px 0px 0px #000000;
+}
+.servicebits {
+}
+.spacer {
+	width: 100px;
+	height: 5px;
+	margin: auto;
+	background-color: #FF0004;
+}
+section.module.parallax {
+	background-position: 0 0;
+}
+section.module.parallax-1 {
+	background: url(../img/treno.png) 50% 0 fixed;
+	background-size: cover;
+}
+section.module.parallax-2 {
+	background: url(../img/treno.png) 50% 0 fixed;
+	background-size: cover;
+}
+section.module.parallax-3 {
+	background: url(../img/hitec.png) 50% 0 fixed;
+	background-size: cover;
+}
+section.module.parallax-4 {
+	color:#ffffff;
+	background: url(../img/roddy.jpg) 50% 0 fixed;
+	background-size: cover;
+}
+.navbar-nav li a {
+	font-family: 'gothambold1', sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+.section-header .section-title span {
+	color: #0e1832;
+	border-bottom: medium solid #d7dee5;
+	margin-bottom: 1rem;
+}
+.boldissimo {
+	font-family: 'Gotham Cond SSm A', 'Gotham Cond SSm B';
+	font-size: 8em;
+	color: #ffffff;
+}
+#skillbit {
+	position: absolute;
+	top: 300px;
+	text-align: center;
+}
+.skew3 {
+	-webkit-transform: rotate(-1deg) skew(-1deg, 0);
+	-moz-transform: rotate(-1deg) skew(-1deg, 0);
+	-ms-transform: rotate(-1deg) skew(-1deg, 0);
+	-o-transform: rotate(-1deg) skew(-1deg, 0);
+	transform: rotate(-1deg) skew(-1deg, 0);
+}
+.rusky {
+	color: #ffffff;
+	background-image: url(../img/red.png);
+	margin-bottom: 1.5em;
+	padding:0.5em;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+.vertical-center {
+	display: table;
+	height: 100%;
+}
+.container .row .col-lg-6 {
+	float: none;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: -4px;
+}
+.table-cell1 {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+.rusky h2 {
+	color: #ffffff;
+		margin-bottom:0px;
+		padding-bottom:0px;
+			margin-top:0px;
+		padding-top:0px;
+		font-weight:700;
+}
+.rusky h2 > span {
+	color: #ffffff;
+
+	
+}
+.rusky h3 {
+	color: #ffffff;
+			margin-top:0px;
+		padding-top:0px;
+		margin-bottom:0px;
+		padding-bottom:0px;
+		font-weight:700;
+}
+.rusky h3 > span {
+	color: #ffffff;
+}
+.container .section-header .section-subtitle {
+	padding-top: 0.1rem;
+}
+.strenghts {
+	font-family: 'gothambold1', sans-serif;
+	font-weight: normal;
+	font-size: 1.2em;
+}
+.tabula {
+	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+	-ms-transform: rotate(-20deg);
+	-o-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+}
+
+.whitebox {
+	background-color:#ffffff;
+	padding:0.5em;
+	opacity:0.5;
+}
+
+.caseheader h3 {
+	text-transform: uppercase;
+	font-family: 'League Gothic', sans-serif;
+	font-weight:700;
+	font-size:2em;
+	margin-top:0px;
+	padding-top:0px;
+			margin-bottom:0px;
+		padding-bottom:0px;
+		color:#FA1A24;
+}
+.caseheader h4 {
+	
+	font-family: 'gothambold1', sans-serif;
+	font-weight: normal;
+	margin-top:0px;
+	padding-top:0px;
+}
+
+
+#portfolio p {
+	font-size:0.7em;
+}
+
+
+/* General button style (reset) */
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	cursor: pointer;
+	padding: 25px 25px;
+	display: inline-block;
+	margin: 15px 15px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	text-align:center;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	background-image: url(../img/red.png);
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Button 1 */
+.btn-1 {
+	border: 3px solid #fff;
+	color: #fff;
+}
+
+.btn-large {
+	width:100%;
+}
+
+/* Button 1a */
+.btn-1a:hover,
+.btn-1a:active {
+	color: #FF0000;
+	background: #fff;
+}
+
+.line-top {
+	border-top: medium solid #FFFFFF;
+	padding-top:1em;
+	margin-top:1em;
+}
+.rotologos li img {
+}
+.navbar-brand {
+	background-image:url(../img/alfologo.png);
+	background-repeat:no-repeat;
+}
+
+/* Button 4 */
+.btn-4 {
+	border: 3px solid #fff;
+	color: #fff;
+	overflow: hidden;
+}
+
+.btn-4:active {
+	color: #FF0000;
+	background: #fff;
+}
+
+.btn-4:hover {
+	color: #FF0000;
+	background: #fff;
+}
+
+.btn-4:before {
+	position: absolute;
+	height: 100%;
+	font-size: 125%;
+	line-height: 3.5;
+	color: #fff;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-4:active:before {
+	color: #17954c;
+}
+
+/* Button 4a */
+.btn-4a:before {
+	left: 130%;
+	top: 0;
+}
+
+.btn-4a:hover:before {
+	left: 80%;
+}
+
+/* Button 4b */
+.btn-4b:before {
+	left: -50%;
+	top: 0;
+}
+
+.btn-4b:hover:before {
+	left: 10%;
+}
+
+.am-wrapper{
+    float:left;
+    position:relative;
+    overflow:hidden;
+}
+.am-wrapper img{
+    position:absolute;
+    outline:none;
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+    /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.rusky {
+	text-align: center;
+}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+.rusky {
+	text-align: center;
+}
+section h2 {
+	width: auto;
+	font-size: 2.3em;
+	font-weight: normal;
+}
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+.rusky {
+	text-align: center;
+}
+section h2 {
+	width: auto;
+	font-size: 2.3em;
+	font-weight: normal;
+}
+}

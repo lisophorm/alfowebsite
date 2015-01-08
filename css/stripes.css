@@ -1,0 +1,135 @@
+@media (max-width: 1024px) {
+	.serviceblock,  {
+		width: 24.9479% !important;
+	}
+
+}
+@media (min-width: 1025px) {
+	.serviceblock {
+		width: 24.9479% !important;
+	}
+
+}
+@media (max-width: 767px) {
+	.serviceblock  {
+		width: 49.9% !important;
+	}
+
+	
+
+}
+@media (max-width: 450px) {
+	.serviceblock,  {
+		width: 100% !important;
+	}
+
+	
+
+}
+
+@media (min-width: 1200px) {
+	/*.project-info {
+		margin: 25% 0 !important;
+	}*/
+}
+
+
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+section.module.parallax-4 {
+
+
+  
+ -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+background-position: center; 
+
+
+
+
+  
+}
+
+
+
+
+
+	@-webkit-keyframes animatedBackground {
+		0% {
+			background-size: 100% 100%;
+		}
+		100% {
+		background-size: 110% 110%;
+		}
+
+	}
+	
+	
+	@-moz-keyframes animatedBackground {
+		0% {
+			background-size: 100% 100%;
+		}
+		100% {
+			background-size: 110% 110%;
+		}
+
+	}
+	@keyframes animatedBackground {
+		0% {
+			background-size: 100% 100%;
+		}
+		100% {
+			background-size: 110% 110%;
+		}
+
+	}
+	
+.jcarousel-wrapper {
+	overflow:hidden;
+    margin: 0px;
+    position: relative;
+    border: none;
+
+
+}
+
+/** Carousel **/
+
+.jcarousel {
+	position: relative;
+	overflow: hidden;
+	width: 120%;
+}
+#logos {
+width:4000px;
+}
+#logos ul {
+	overflow:hidden;
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#logos li {
+	list-style: none;
+	float: left;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+#logos li img {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	max-width: 100%;
+	height: auto !important;
+}
