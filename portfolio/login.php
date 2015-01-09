@@ -70,6 +70,8 @@ if (isset($_POST['passwd'])) {
   }
   else {
       die("FAIL");
+  } 
+} else {
+      die("FAIL");
   }
-}
 ?>

@@ -1,4 +1,4 @@
-<?php
+<?php require_once('../Connections/localhost.php'); ?><?php
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {
@@ -29,6 +29,16 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
   return $theValue;
 }
 }
+
+$colname_dummy = "-1";
+if (isset($_GET['password'])) {
+  $colname_dummy = $_GET['password'];
+}
+mysql_select_db($database_localhost, $localhost);
+$query_dummy = sprintf("SELECT password FROM `access` WHERE password = %s", GetSQLValueString($colname_dummy, "text"));
+$dummy = mysql_query($query_dummy, $localhost) or die(mysql_error());
+$row_dummy = mysql_fetch_assoc($dummy);
+$totalRows_dummy = mysql_num_rows($dummy);
 
 $colname_getcase = "-1";
 if (isset($_GET['id'])) {
@@ -87,7 +97,12 @@ $files = glob(GetSQLValueString($colname_getcase, "int")."/*.{png,jpg,jpeg,JPG}"
 shuffle($files); 
 if(count($files)>0) {
 foreach ($files as $file) {
-    print "<div><img class=\"portfolio-img\" src=\"portfolio/$file\" /></div>";
+	
+	
+	
+	list($width, $height, $type, $attr) = getimagesize("$file");
+	
+    print "<div><img class=\"portfolio-img\" width=\"$width\" height=\"$height\" src=\"portfolio/$file\" /></div>";
 	//for ($i = 1; $i <= 5; $i++) {
     //print " <li><img src=\"http://lorempixel.com/800/600/?gino=".rand()."\"  class=\"img-responsive\" /></li>";
 }} else {
@@ -98,3 +113,6 @@ foreach ($files as $file) {
       </div>
     </div>
   </div>
+  <?php
+mysql_free_result($dummy);
+?>

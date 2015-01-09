@@ -16,9 +16,13 @@ Version: 1.0
  *	Code: 	font-family: 'Whitney SSm A', 'Whitney SSm B';
  *	Sizes:
  */
+ 
+ document {
+	 font-size:12px;
+ }
+ 
 .navbar {
-
-    display: block;
+	display: block;
     position: fixed;
 }
 a,a:hover,a:focus,a:active,a:visited {
@@ -66,7 +70,7 @@ section h1 {
 	letter-spacing: 0.2em;
 }
 #page-top #home {
-	background-image: url(../img/konstru.jpg);
+	background-image: url(../img/konstru.gif);
 	padding-top: 4em;
 	padding-bottom: 2em;
 	background-color: #FA1A24;
@@ -235,7 +239,7 @@ section.module.parallax-3 {
 }
 section.module.parallax-4 {
 	color:#ffffff;
-	background: url(../img/roddy.jpg) 50% 0 fixed;
+	background: url(../img/roddy.gif) 50% 0 fixed;
 	background-size: cover;
 }
 .navbar-nav li a {
@@ -343,8 +347,8 @@ section.module.parallax-4 {
 }
 .caseheader h4 {
 	
-	font-family: 'gothambold1', sans-serif;
-	font-weight: normal;
+	font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
+	font-weight: 700;
 	margin-top:0px;
 	padding-top:0px;
 }
@@ -506,10 +510,21 @@ section h2 {
 	font-size: 2.3em;
 	font-weight: normal;
 }
+body {
+	font-size:1.5em;
+}
+	.navbar {
+	font-size:2em;
+
+}
 }
 
 /* Custom, iPhone Retina */ 
 @media only screen and (max-width : 320px) {
+
+body {
+	font-size:1.5em;
+}
 .rusky {
 	text-align: center;
 }
@@ -517,5 +532,9 @@ section h2 {
 	width: auto;
 	font-size: 2.3em;
 	font-weight: normal;
+}
+	.navbar {
+	font-size:2em;
+
 }
 }

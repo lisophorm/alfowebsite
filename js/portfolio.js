@@ -1,4 +1,3 @@
-
 $(function() {
 
     $("input,textarea").jqBootstrapValidation({
@@ -7,7 +6,7 @@ $(function() {
             // additional error messages or events
         },
         submitSuccess: function($form, event) {
-			console.log("inside press password");
+            console.log("inside press password");
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
             var password = $("#passwordfield").val();
@@ -19,19 +18,19 @@ $(function() {
                     passwd: password
                 },
                 cache: false
-            }).done(function( data ) {
-   	if(data=="SUCCSSS") {
-		console.log("pwd success");
-		        $("#passwordform").collapse();
-                //$('#mycarousel').carousel('cycle');
-                //$("#contento").collapse();
-				loadCase(1,false);
-	} else {
-		            $('#success').html("<div class='alert alert-danger'>");
+            }).done(function(data) {
+                if (data == "SUCCSSS") {
+                    console.log("pwd success");
+                    $("#passwordform").collapse();
+                    //$('#mycarousel').carousel('cycle');
+                    //$("#contento").collapse();
+                    loadCase(1, false);
+                } else {
+                    $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("WRONG PASSWORD");
                     $('#success > .alert-danger').append('</div>');
-	}
-  });
+                }
+            });
         },
         filter: function() {
             return $(this).is(":visible");
@@ -44,46 +43,59 @@ $(function() {
     });
 });
 
-        function loadCase(page,event) {
-			//$(".preloaderbox").fadeIn(300);
-			console.log("loadcase pagina:" + page);
-			if(page==0) {
-				console.log("page > 0");
-			$(".whitebox").animate({ opacity: 1 },function() {
-			console.log("whitepage very first page=0");
-			});
-			
-			}  else {
-				
-			}
-			if(event) {
+function loadCase(page, event) {
+        //$(".preloaderbox").fadeIn(300);
+        console.log("loadcase pagina:" + page);
+        if (page == 0) {
+            console.log("page > 0");
+            $(".whitebox").animate({
+                opacity: 1
+            }, function() {
+                console.log("whitepage very first page=0");
+            });
+
+        } else {
+
+        }
+        if (event) {
             event.preventDefault();
-			}
-			console.log("before pace:" + page);
-            Pace.restart();
-			console.log("pace restart:" + page);
-			/*        $('html, body').stop().animate({
-            scrollTop: $("#protetto").offset().top-100
-        }, 1500, 'easeInOutExpo');*/
-		console.log("loadcase:" + page);
-           	$(".whitebox").clearQueue();
- 			 $(".whitebox").stop();
+        }
+        
+        /*        $('html, body').stop().animate({
+                 scrollTop: $("#protetto").offset().top-100
+             }, 1500, 'easeInOutExpo');*/
+        console.log("loadcase:" + page);
+        $(".whitebox").clearQueue();
+        $(".whitebox").stop();
 
-            $(".whitebox").animate({ opacity: 0 },300);
+        $(".whitebox").animate({
+            opacity: 0
+        }, 300);
 
-            //$("#portfoliolink").delay( 1000).trigger("click").delay( 300).trigger("click");
-			setTimeout(function() {
-				
-                           console.log("loading pagina:" + page);
+        //$("#portfoliolink").delay( 1000).trigger("click").delay( 300).trigger("click");
+        setTimeout(function() {
+
+            console.log("loading pagina:" + page);
             $("#protetto").load("portfolio/portfolio.php?id=" + page, function() {
+			 var theOffset = parseInt($("#protettowipe").offset().top)-(parseInt($("#navstripe").height())*1.5);
+	
+			$('html, body').stop().animate({
+				scrollTop:theOffset+"px"
+			}, 500,function() {
+				console.log("before pace:" + page);
+       			 Pace.restart();
+        		console.log("pace restart:" + page);
+			});				
+
+				
                 $(".pager li a").click(function(e) {
                     console.log("click on pafgintio pager");
                     history.pushState(null, null, $(this).attr('href'));
 
                 });
-				$(".pager li a.prevcase").click(function(e) {
-					
-					
+                $(".pager li a.prevcase").click(function(e) {
+
+
                     $(".prev").trigger("click");
 
                 });
@@ -99,40 +111,40 @@ $(function() {
 
 
             });
-            
-			},300);
 
-            //$("#protettowipe").delay( 800 ).fadeOut( 400 );
+        }, 300);
 
-            $('#page-content').text('Page ' + page);
+        //$("#protettowipe").delay( 800 ).fadeOut( 400 );
 
-        }
-/*
-,
-                success: function() {
-                    // Success message
-                    $('#success').html("<div class='alert alert-success'>");
-                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    $('#success > .alert-success')
-                        .append("<strong>Your message has been sent. </strong>");
-                    $('#success > .alert-success')
-                        .append('</div>');
+        $('#page-content').text('Page ' + page);
 
-                    //clear all fields
-                    $('#contactForm').trigger("reset");
-                },
-                error: function() {
-                    // Fail message
-                    $('#success').html("<div class='alert alert-danger'>");
-                    $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
-                    $('#success > .alert-danger').append('</div>');
-                    //clear all fields
-                    $('#contactForm').trigger("reset");
-                },
-*/
+    }
+    /*
+    ,
+                    success: function() {
+                        // Success message
+                        $('#success').html("<div class='alert alert-success'>");
+                        $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                            .append("</button>");
+                        $('#success > .alert-success')
+                            .append("<strong>Your message has been sent. </strong>");
+                        $('#success > .alert-success')
+                            .append('</div>');
+
+                        //clear all fields
+                        $('#contactForm').trigger("reset");
+                    },
+                    error: function() {
+                        // Fail message
+                        $('#success').html("<div class='alert alert-danger'>");
+                        $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                            .append("</button>");
+                        $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
+                        $('#success > .alert-danger').append('</div>');
+                        //clear all fields
+                        $('#contactForm').trigger("reset");
+                    },
+    */
 
 /*When clicking on Full hide fail/success boxes */
 $('#name').focus(function() {
@@ -140,85 +152,88 @@ $('#name').focus(function() {
 });
 
 $(document).ready(function(e) {
-	// need this just to trigger event later 
-		$(".whitebox").animate({ opacity: 0.5});
-		$("#protetto").load("portfolio/portfolio.php?id=0");
-        $('#pagination-demo').twbsPagination({
-            totalPages: 35,
-            visiblePages: 7,
-            onPageClick: function(event, page) {
-                loadCase(page,event);
+    // need this just to trigger event later 
+    $(".whitebox").animate({
+        opacity: 0.5
+    });
+    $("#protetto").load("portfolio/portfolio.php?id=0");
+    $('#pagination-demo').twbsPagination({
+        totalPages: 35,
+        visiblePages: 7,
+        onPageClick: function(event, page) {
+            loadCase(page, event);
 
-            }
-        });
-        $('.pagination a').click(function(e) {
-            console.log("click on pafgintio next");
-            history.pushState(null, null, $(this).attr('href'));
+        }
+    });
+    $('.pagination a').click(function(e) {
+        console.log("click on pafgintio next");
+        history.pushState(null, null, $(this).attr('href'));
 
+    });
+
+
+    Pace.on('done', function() {
+        console.log("pace done");
+        //$(".preloaderbox").fadeOut(300);
+        $("#protettowipe").collapse();
+        $(".whitebox").animate({
+            opacity: 1
         });
-		
-		
-		            Pace.on('done', function() {
-				console.log("pace done");
-            //$(".preloaderbox").fadeOut(300);
-			$("#protettowipe").collapse();
-						$(".whitebox").animate({ opacity: 1});
-			/*	$('.bxslider').bxSlider({
+        /*	$('.bxslider').bxSlider({
 					adaptiveHeight:true,
 					responsive:true,
                     auto: true,
                     controls:false
                 });*/
-				
-				
-	$('.bxslider').montage({
-								maxh:140,
-								liquid:false,
-								alternateHeight         : true,
-								fillLastRow:true
-							});
-		
-			
-							
-		$(".portfolio-img").click(function() {
-			console.log("you clicked img");
-			
-			var theOffset=parseInt($("#protettowipe").offset().top);
-			var theHeight=Math.floor(theOffset+parseInt($("#protettowipe").height())/2);
-			
-			
-/*								        $('html, body').animate({
-            scrollTop: theHeight+"px"
-        }, 500);*/
 
-			
-			if($(this).hasClass("selectedZoomTarget")) {
-				console.log("zoon target");
-			}
-		});
-		$(".portfolio-img").zoomTarget({targetsize:0.75, 
 
-		closeclick:true, duration:600
-		
-
-		});			
-		
-		
-												        $('html, body').stop().animate({
-            scrollTop: $("#protettowipe").offset().top
-        }, 500);		
-	
-				
+        $('.bxslider').montage({
+            maxh: 140,
+            liquid: false,
+            alternateHeight: true,
+            fillLastRow: true,
+			margin:0
         });
-		
-		            Pace.on('restart', function() {
-				console.log("pace restart");
-            //$(".preloaderbox").fadeOut(300);
-						//$(".whitebox").animate({ opacity: 1});
+
+
+
+        $(".portfolio-img").click(function() {
+            console.log("you clicked img");
+
+
+
+
+            /*								        $('html, body').animate({
+                        scrollTop: theHeight+"px"
+                    }, 500);*/
+
+
+            if ($(this).hasClass("selectedZoomTarget")) {
+                console.log("zoon target");
+            }
         });
-		
+        $(".portfolio-img").zoomTarget({
+            targetsize: 0.75,
+
+            closeclick: true,
+            duration: 600
+
+
+        });
+
+
+
+
+    });
+
+    Pace.on('restart', function() {
+        console.log("pace restart");
+        //$(".preloaderbox").fadeOut(300);
+        //$(".whitebox").animate({ opacity: 1});
+    });
+
 });
 
 function endZoom() {
-	console.log("endzoom");
+    console.log("endzoom");
 }

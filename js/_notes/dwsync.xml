@@ -3,7 +3,7 @@
 <file name="bootstrap.js" server="C:/xamppok/htdocs/alfofinal/" local="130644538902339666" remote="130644538900000000" Dst="1" />
 <file name="bootstrap.min.js" server="C:/xamppok/htdocs/alfofinal/" local="130644538902469758" remote="130644538900000000" Dst="1" />
 <file name="npm.js" server="C:/xamppok/htdocs/alfofinal/" local="130644538902569829" remote="130644538900000000" Dst="1" />
-<file name="alfonso.js" server="C:/xamppok/htdocs/alfofinal/" local="130652378569280199" remote="130652378560000000" Dst="1" />
+<file name="alfonso.js" server="C:/xamppok/htdocs/alfofinal/" local="130652532115749412" remote="130652532110000000" Dst="1" />
 <file name="jquery.fittext.js" server="C:/xamppok/htdocs/alfofinal/" local="130645239867972954" remote="130645239860000000" Dst="1" />
 <file name="jquery.simple-text-rotator.js" server="C:/xamppok/htdocs/alfofinal/" local="130648950469528815" remote="130648950460000000" Dst="1" />
 <file name="masonry.pkgd.min.js" server="C:/xamppok/htdocs/alfofinal/" local="130645412120000000" remote="130645412120000000" Dst="1" />
@@ -12,12 +12,12 @@
 <file name="freelancer.js" server="C:/xamppok/htdocs/alfofinal/" local="130638303732655480" remote="130638303730000000" Dst="1" />
 <file name="jquery.scale9grid-0.9.3.js" server="C:/xamppok/htdocs/alfofinal/" local="130647848720783019" remote="130647848720000000" Dst="1" />
 <file name="pace.min.js" server="C:/xamppok/htdocs/alfofinal/" local="130648680089266634" remote="130648680080000000" Dst="1" />
-<file name="portfolio.js" server="C:/xamppok/htdocs/alfofinal/" local="130652381061268290" remote="130652381060000000" Dst="1" />
+<file name="portfolio.js" server="C:/xamppok/htdocs/alfofinal/" local="130652531552213602" remote="130652531550000000" Dst="1" />
 <file name="anim.js" server="C:/xamppok/htdocs/alfofinal/" local="130648618721409486" remote="130648618720000000" Dst="1" />
 <file name="jqBootstrapValidation.js" server="C:/xamppok/htdocs/alfofinal/" local="130648657086078421" remote="130648657080000000" Dst="1" />
 <file name="endless.js" server="C:/xamppok/htdocs/alfofinal/" local="130649748566267006" remote="130649748560000000" Dst="1" />
 <file name="alfonso - Copy.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130648819231310502" remote="130649690400000000" Dst="1" />
-<file name="alfonso.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130651378230899446" remote="130651291800000000" Dst="1" />
+<file name="alfonso.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130652532115749412" remote="130652784000000000" Dst="1" />
 <file name="anim.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130648618721409486" remote="130649690400000000" Dst="1" />
 <file name="bootstrap.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130644538902339666" remote="130649690400000000" Dst="1" />
 <file name="bootstrap.min.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130644538902469758" remote="130649690400000000" Dst="1" />
@@ -32,10 +32,14 @@
 <file name="masonry.pkgd.min.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130645412120000000" remote="130649690400000000" Dst="1" />
 <file name="npm.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130644538902569829" remote="130649690400000000" Dst="1" />
 <file name="pace.min.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130648680089266634" remote="130649690400000000" Dst="1" />
-<file name="portfolio.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130651440145288819" remote="130651291800000000" Dst="1" />
+<file name="portfolio.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130652959977818493" remote="130652816400000000" Dst="1" />
 <file name="jquery.corner.js" server="C:/xamppok/htdocs/alfofinal/" local="130650430350000000" remote="130650430350000000" Dst="1" />
 <file name="jquery.animate-enhanced.min.js" server="C:/xamppok/htdocs/alfofinal/" local="130651240366578073" remote="130651240360000000" Dst="1" />
 <file name="alfonso - Copy.js" server="C:/xamppok/htdocs/alfofinal/" local="130648819231310502" remote="130648819230000000" Dst="1" />
 <file name="jquery.animate-enhanced.min.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130651240366578073" remote="130651291800000000" Dst="1" />
 <file name="jquery.corner.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130650430350000000" remote="130651291800000000" Dst="1" />
+<file name="index8.html" server="C:/xamppok/htdocs/alfofinal/" local="130651282397612646" remote="130651282390000000" Dst="1" />
+<file name="index8.html" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130651282397612646" remote="130652784000000000" Dst="1" />
+<file name="jquery.montage.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130652052744924270" remote="130652784000000000" Dst="1" />
+<file name="jquery.montage.min.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130651282412062859" remote="130652784000000000" Dst="1" />
 </dwsync>
