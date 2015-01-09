@@ -84,6 +84,7 @@ $h4 = $dom->getElementsByTagName('h4');
       <div class="bxslider">
         <?php
 $files = glob(GetSQLValueString($colname_getcase, "int")."/*.{png,jpg,jpeg,JPG}", GLOB_BRACE);
+shuffle($files); 
 if(count($files)>0) {
 foreach ($files as $file) {
     print "<div><img class=\"portfolio-img\" src=\"portfolio/$file\" /></div>";

@@ -1,3 +1,4 @@
+
 $(function() {
 
     $("input,textarea").jqBootstrapValidation({
@@ -81,10 +82,13 @@ $(function() {
 
                 });
 				$(".pager li a.prevcase").click(function(e) {
+					
+					
                     $(".prev").trigger("click");
 
                 });
                 $(".pager li a.nextcase").click(function(e) {
+
                     $(".next").trigger("click");
 
                 });
@@ -152,9 +156,9 @@ $(document).ready(function(e) {
             history.pushState(null, null, $(this).attr('href'));
 
         });
-});
-
-            Pace.on('done', function() {
+		
+		
+		            Pace.on('done', function() {
 				console.log("pace done");
             //$(".preloaderbox").fadeOut(300);
 			$("#protettowipe").collapse();
@@ -169,21 +173,40 @@ $(document).ready(function(e) {
 				
 	$('.bxslider').montage({
 								maxh:140,
-								liquid:true,
+								liquid:false,
 								alternateHeight         : true,
 								fillLastRow:true
 							});
 		
 			
-		$(".am-wrapper").zoomTarget({targetsize:0.75, closeclick:true, duration:600});	
 							
-            //    $(".portfolio-img").click(function(e) {
-				//	e.preventDefault();
-                  //  console.log("click on .portfolio-img");
-                  //  history.pushState(null, null, $(this).attr('href'));
+		$(".portfolio-img").click(function() {
+			console.log("you clicked img");
+			
+			var theOffset=parseInt($("#protettowipe").offset().top);
+			var theHeight=Math.floor(theOffset+parseInt($("#protettowipe").height())/2);
+			
+			
+/*								        $('html, body').animate({
+            scrollTop: theHeight+"px"
+        }, 500);*/
 
-               // });
-					
+			
+			if($(this).hasClass("selectedZoomTarget")) {
+				console.log("zoon target");
+			}
+		});
+		$(".portfolio-img").zoomTarget({targetsize:0.75, 
+
+		closeclick:true, duration:600
+		
+
+		});			
+		
+		
+												        $('html, body').stop().animate({
+            scrollTop: $("#protettowipe").offset().top
+        }, 500);		
 	
 				
         });
@@ -193,3 +216,9 @@ $(document).ready(function(e) {
             //$(".preloaderbox").fadeOut(300);
 						//$(".whitebox").animate({ opacity: 1});
         });
+		
+});
+
+function endZoom() {
+	console.log("endzoom");
+}

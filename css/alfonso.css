@@ -12,16 +12,6 @@ Version: 1.0
 =============================*/
 
 /**
- *	Name: 	Gotham Condensed Book
- *	Code: 	font-family: 'Gotham Cond SSm A', 'Gotham Cond SSm B';
- *	Sizes: 	400, 600
- */
-/**
- *	Name: 	Gotham
- *	Code: 	font-family: 'Gotham SSm A', 'Gotham SSm B';
- *	Sizes: 	500
- */
-/**
  *	Name: 	Whitney
  *	Code: 	font-family: 'Whitney SSm A', 'Whitney SSm B';
  *	Sizes:
@@ -93,12 +83,7 @@ section {
 	padding-right: 1em;
 	background-image: url(../img/red.png);
 }
-.section-header p {
-	font-family: 'Gotham SSm A', 'Gotham SSm B';
-	color: #ffffff;
-	font-size: 1em;
-	text-transform: uppercase;
-}
+
 header h1 {
 	font-family: 'Voltaire', sans-serif;
 	color: #ffffff;
@@ -106,7 +91,8 @@ header h1 {
 	text-shadow: 2px 2px 0px black;
 }
 body {
-	font-family: 'Whitney SSm A', 'Whitney SSm B';
+	font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
+	/*font-family: 'GothamBook';*/
 	text-shadow: 0 0 1px rgba(0,0,0,0.3);
 	font-size: 2em;
 	background-image: url(../img/light_toast.png);
@@ -187,7 +173,7 @@ header {
 	background-color: #84B929;
 	float: left;
 	text-transform: uppercase;
-	font-family: 'League Gothic', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	text-shadow: 1px 1px 0px black;
 	text-align: center;
 }
@@ -253,8 +239,8 @@ section.module.parallax-4 {
 	background-size: cover;
 }
 .navbar-nav li a {
-	font-family: 'gothambold1', sans-serif;
-	font-weight: normal;
+	font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
+	font-weight: 600;
 	text-transform: uppercase;
 	font-size: 0.8em;
 }
@@ -263,11 +249,7 @@ section.module.parallax-4 {
 	border-bottom: medium solid #d7dee5;
 	margin-bottom: 1rem;
 }
-.boldissimo {
-	font-family: 'Gotham Cond SSm A', 'Gotham Cond SSm B';
-	font-size: 8em;
-	color: #ffffff;
-}
+
 #skillbit {
 	position: absolute;
 	top: 300px;
@@ -350,7 +332,7 @@ section.module.parallax-4 {
 
 .caseheader h3 {
 	text-transform: uppercase;
-	font-family: 'League Gothic', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-weight:700;
 	font-size:2em;
 	margin-top:0px;
@@ -382,7 +364,6 @@ section.module.parallax-4 {
 	cursor: pointer;
 	padding: 25px 25px;
 	display: inline-block;
-	margin: 15px 15px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 700;
@@ -393,6 +374,7 @@ section.module.parallax-4 {
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
 	background-image: url(../img/red.png);
+	word-wrap:break-word; 
 }
 
 .btn:after {
@@ -411,7 +393,9 @@ section.module.parallax-4 {
 }
 
 .btn-large {
-	width:100%;
+	width: 100%;
+	padding-left: 0px;
+	padding-right:0px;
 }
 
 /* Button 1a */

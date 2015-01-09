@@ -1,5 +1,11 @@
 // JavaScript Document
 
+
+
+// jQuery for page scrolling feature - requires jQuery Easing plugin
+
+
+
 // parallax shit
 
 
@@ -96,6 +102,14 @@ $("#navbar").on("click","a",null,function() {
 	$("#navbar").collapse("hide");
 });
 
+    $("#navbar").find("a").bind('click', function(event) {
+		console.log("scroll the page");
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500);
+        event.preventDefault();
+    });
 
 	setInterval(function() {
 		var off=$("#alfo").offset();

@@ -21,25 +21,9 @@
     <link href="css/alfonso.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/textrotator.css">
     <link rel="stylesheet" type="text/css" href="css/stripes.css">
-    <link rel="stylesheet" type="text/css" href="fonts/font.css">
+    <!--link rel="stylesheet" type="text/css" href="fonts/font.css"-->
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
-    <link rel="stylesheet" type="text/css" href="webfot/stylesheet.css">
-    <script>
-        paceOptions = {
-ajax: {
-    ignoreURLs: ['#', /some-regexp/]
-  },
-            startOnPageLoad: false,
-			restartOnPushState: false,
-            ajax: false, // disabled
-            document: false, // disabled
-            eventLag: true, // disabled
-            elements: {
-                selectors: ['.bxslider']
-            }
-        };
-    </script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+
     <link href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/red/pace-theme-minimal.css" rel="stylesheet" />
     </head>
 
@@ -52,11 +36,11 @@ ajax: {
     <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="#home">Home</a> </li>
-        <li><a href="#about">About</a> </li>
-        <li><a href="#strenghts">My Strenghts</a> </li>
-        <li><a href="#skills">My Skills</a> </li>
-        <li><a href="#portfolio">Portfolio</a> </li>
-        <li><a href="#contact">Contact</a> </li>
+        <li><a class="page-scroll" href="#about">About</a> </li>
+        <li><a class="page-scroll" href="#strenghts">My Strenghts</a> </li>
+        <li><a class="page-scroll" href="#skills">My Skills</a> </li>
+        <li><a class="page-scroll" href="#portfolio">Portfolio</a> </li>
+        <li><a class="page-scroll" href="#contact">Contact</a> </li>
       </ul>
         </div>
     <!--/.nav-collapse --> 
@@ -83,7 +67,7 @@ ajax: {
 <section id="about">
       <div class="wow slideInRight" data-wow-duration="1s" data-wow-delay="1s">
     <div class="row">
-          <div class="col-s-12 col-md-10 col-md-offset-2 col-lg-8  rusky text-left">
+          <div class="col-s-12 col-md-11 col-md-offset-1 col-lg-10 col-lg-offset-2 rusky text-left">
         <div class="">
               <h2 class="chapter">A LITTLE ABOUT ME</h2>
               <h3>And why I am your new secret weapon</h3>
@@ -92,24 +76,24 @@ ajax: {
         </div>
   </div>
       <div class="row">
-    <div class="col-s-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-          <div class="col-xs-12 col-sm-6 col-md-4 pull-right text-center"> <img class="img-responsive" src="img/lovethebomb.png" width="517" height="544" alt="" />
-        <button class="btn btn-1 btn-1a img-responsive">DOWNLOAD MY CV</button>
-      </div>
+    <div class="col-xs-12 col-sm-6 col-md-7 col-md-offset-1 col-lg-6 col-lg-offset-2">
+          
           <p>An <strong>award winning software architect, creative technologist, </strong>and<strong> experimental artist with over 20 years of expertise</strong> In advertising, media and marketing. <strong>My experience spans across software, television, design and experimental art</strong>. </p>
           <p>My interdisciplinary approach always brings fresh ideas to the table, and <strong>I can play a key role connecting creatives with geeks</strong> to make ideas reality. </p>
           <p>I specialise in creating bespoke technologies that engage consumers at events and amplify via social media. Even if you're not into experiential marketing <strong>you can benefit from my mission critical approach to projects</strong>.</p>
-          <hr/>
           <p>I&rsquo;ve created digital engagement tools for <strong>award winning events</strong> from Dublin to Qatar, Manchester to Mumbai. For brands and rights holders as diverse as <strong>Vodafone, EDF Energy, the NFL and Tesco</strong>.</p>
           <p>My work and that of my team has <strong>won numerous international awards</strong> and recognition and has achieved amplification of campaigns that largely exceeds the standard 175 impressions per published post.</p>
           <p>Nothing gives me greater pleasure than seeing the end result of late night programming coming to life in a moment of joy when a consumer engages with one of my creations.</p>
         </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 text-center"> <img class="img-responsive" src="img/lovethebomb.png" width="517" height="544" alt="" />
+        <button class="btn btn-1 btn-1a btn-large img-responsive">DOWNLOAD MY CV</button>
+      </div>
   </div>
     </section>
 <section class="module parallax parallax-1" id="strenghts">
       <div class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">
     <div class="row">
-          <div class="col-s-12 col-md-10 rusky text-right ">
+          <div class="col-s-12 col-md-11 col-lg-10 rusky text-right ">
         <div class="">
               <h2 class="chapter">MY STRENGHTS</h2>
               <h3>&quot;attention to detail&quot; - really you want to read that?</h3>
@@ -117,9 +101,9 @@ ajax: {
       </div>
         </div>
   </div>
-      <div data-uk-scrollspy="{cls:'uk-animation-fade', repeat: true,delay:900}" class="container">
+
     <div class="row">
-          <div class="col-md-8 strenghts">
+          <div class="col-md-7 col-md-offset-1 col-lg-6 col-lg-offset-2 strenghts">
         <p>Seven years in experiential marketing</p>
         <p>Good team manager</p>
         <p>Multi disciplinary / artistic background</p>
@@ -130,14 +114,14 @@ ajax: {
         <p>Making technology simple for the consumer </p>
         <p>Neapolitan passion for ideas</p>
       </div>
-          <div class="col-md-4 boldissimo"><img class="img-responsive" src="img/leaky_pad.png" width="394" height="460" alt="" /> </div>
+          <div class="col-md-3"><img class="img-responsive center-block" src="img/leaky_pad.png" alt="" /> </div>
         </div>
-  </div>
+
     </section>
 <section id="skills">
       <div class="wow slideInRight" data-wow-duration="1s" data-wow-delay="1s">
     <div class="row">
-          <div class="col-s-12 col-md-10 col-md-offset-2  rusky text-left">
+          <div class="col-s-12 col-md-11 col-md-offset-1 col-lg-10 col-lg-offset-2 rusky text-left">
         <div class="">
               <h2 class="chapter">MY SKILLS</h2>
               <h3>fantasy, intuition, boldness and execution speed</h3>
@@ -146,8 +130,8 @@ ajax: {
         </div>
   </div>
       <div class="row">
-    <div class="'col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-2">
-          <div class="col-xs-6 col-sm-6 col-md-4 pull-right"> <img class="img-responsive" src="img/electrovertical.png" alt="" /> </div>
+    <div class="col-s-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-left">
+          <div class="col-xs-6 col-sm-6 col-md-4 pull-right"> <img class="img-responsive" src="img/network.png" alt="" /> </div>
           <p>Mobile and web developer</p>
           <p>Wireframing / UML / software design</p>
           <p>Excellent interpersonal skills, can lead a small team of developers / designers</p>
@@ -169,56 +153,57 @@ ajax: {
   </div>
     </section>
 <section id="portfolio" class="module parallax parallax-3">
-  <div class="">
-  <div class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">
-    <div class="row">
-      <div class="col-s-12 col-md-11 col-lg-10 text-right ">
-        <div class="rusky">
-          <h2 class="chapter">MY CASE STUDIES</h2>
-          <h3>my work speaks by itself</h3>
+      <div class="zoomViewport">
+    <div class="zoomContainer">
+          <div class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">
+        <div class="row">
+              <div class="col-s-12 col-md-11 col-lg-10 rusky text-right">
+
+                  <h2 class="chapter">MY CASE STUDIES</h2>
+                  <h3>my work speaks by itself</h3>
+
           </div>
-        </div>
-      </div>
-  </div>
-    <div class="row">
-      <div id="passwordform" class="col-s-12 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-4 collapse in">
-        <form name="passwordfom1" id="passwordfom1" novalidate>
-          <div class="row control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Type in your password</label>
-              <input type="password" class="form-control" placeholder="Type here your password" id="passwordfield" required data-validation-required-message="Please enter the password.">
-              <p class="help-block text-danger"></p>
             </div>
-          </div>
-          <br>
-          <div id="success"></div>
+      </div>
           <div class="row">
-            <div class="form-group col-xs-12">
-              <button id="pwbutton" type="submit" class="btn btn-1 btn-1a btn-large" style="font-size:0.5em">Show me the magic</button>
+        <div id="passwordform" class="col-s-12 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-4 collapse in">
+              <form name="passwordfom1" id="passwordfom1" novalidate>
+            <div class="row">
+                  <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Type in your password</label>
+                <input type="password" class="form-control" placeholder="Type here your password" id="passwordfield" required data-validation-required-message="Please enter the password.">
+                <p class="help-block text-danger"></p>
+              </div>
+                </div>
+            <br>
+            <div id="success"></div>
+            <div class="row">
+                  <div class="col-xs-12">
+                <button id="pwbutton" type="submit" class="btn btn-1 btn-1a btn-large" style="font-size:0.5em">Show me the magic</button>
+              </div>
+                </div>
+          </form>
             </div>
-          </div>
-        </form>
       </div>
-    </div>
-    <div class="row collapse" id="protettowipe">
-      <div class="">
-        <div class="col-s-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-          <div class="whitebox">
-            <div class="preloaderbox" style="display:none;"></div>
-            <div id="protetto"> </div>
+          <div class="row collapse" id="protettowipe">
+        <div class="">
+              <div class="col-s-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+            <div class="whitebox">
+                  <div class="preloaderbox" style="display:none;"></div>
+                  <div id="protetto"> </div>
+                </div>
+            <div class="row" id="portfoliopaginator">
+                  <ul id="pagination-demo" class="pagination-lg">
+              </ul>
+                </div>
           </div>
-          <div class="row" id="portfoliopaginator">
-            <ul id="pagination-demo" class="pagination-lg">
-            </ul>
-          </div>
-        </div>
+            </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="jcarousel-wrapper">
-        <div class="jcarousel">
-          <ul id="logos">
-            <?php
+          <div class="row">
+        <div id="#cselogos" class="jcarousel-wrapper collapse in">
+              <div class="jcarousel">
+            <ul id="logos">
+                  <?php
 $files = glob("img/clients/*.{png}", GLOB_BRACE);
 if(count($files)>0) {
 foreach ($files as $file) {
@@ -227,10 +212,11 @@ foreach ($files as $file) {
     //print " <li><img src=\"http://lorempixel.com/800/600/?gino=".rand()."\"  class=\"img-responsive\" /></li>";
 }}
 ?>
-          </ul>
-        </div>
+                </ul>
+          </div>
+            </div>
       </div>
-    </div>
+        </div>
   </div>
     </section>
 <section id="contact" class="module parallax parallax-4">
@@ -256,10 +242,20 @@ foreach ($files as $file) {
 <script src="js/jquery.simple-text-rotator.js"></script> 
 <script src="js/jqBootstrapValidation.js"></script> 
 <script src="js/anim.js"></script> 
-<script src="js/portfolio.js"></script> 
-<script src="bxslider/jquery.bxslider.min.js"></script> 
-<!-- bxSlider CSS file -->
-<link href="bxslider/jquery.bxslider.css" rel="stylesheet" />
+    <script>
+        paceOptions = {
+
+            startOnPageLoad: false,
+			restartOnPushState: false,
+            ajax: false, // disabled
+            document: false, // disabled
+            eventLag: true, // disabled
+            elements: {
+                selectors: ['#home','.bxslider','#alfo','.portfolio-img']
+            }
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
 <script src="pagination/jquery.twbsPagination.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/animate.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.0.2/wow.min.js">
@@ -274,8 +270,9 @@ foreach ($files as $file) {
         })
         wow.init();
     </script> 
-<!--script src="//cdn.jsdelivr.net/velocity/1.2.1/velocity.min.js"></script--><script src="imagemontage/js/jquery.montage.js"></script>
-<script src="zoomzoom/jquery.zoomooz.min.js"></script>
+<!--script src="//cdn.jsdelivr.net/velocity/1.2.1/velocity.min.js"></script--><script src="imagemontage/js/jquery.montage.js"></script> 
+<script src="zoomzoom/jquery.zoomooz.min.js"></script> 
+<script src="js/portfolio.js"></script>
 <script src="js/alfonso.js"></script>
 </body>
 </html>
