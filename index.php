@@ -45,13 +45,13 @@
     <!--/.nav-collapse --> 
   </div>
 </nav>
-<header class="jumbotron blue rusky" id="home">
+<header class="jumbotron red" id="home">
     <div id="skillbit"> <span class="rotoskills">CREATIVE&nbsp;TECHNOLOGIST,SOFTWARE&nbsp;ARCHITECT,LEAD&nbsp;DEVELOPER</span> </div>
 
   <div class="">
     <div class="row">
 
-      <div class="col-md-4 text-center">
+      <div class="col-sx-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-2 text-center">
         <div class="jumbo-icon jumbo-icon-home" >
           <img id="alfo" class="img-responsive" src="img/alfocenteredl.png" alt="" />
         </div>
@@ -59,7 +59,7 @@
           <div class="outer"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> </div>
         </div>
       </div>
-            <div class="col-md-8 text-center" id="textcol">
+            <div class="col-sx-12 col-sm-12 col-md-6 col-lg-6 text-center" id="textcol">
         <div id="title">
           <h1 id="stretchme">ALFONSO FLORIO</h1>
         </div>
@@ -76,7 +76,7 @@
 <section id="about">
   <div class="wow slideInRight" data-wow-duration="1s" data-wow-delay="1s">
     <div class="row">
-      <div class="col-s-12 col-md-11 col-md-offset-1 col-lg-10 col-lg-offset-2 rusky text-left">
+      <div class="col-sx-12 col-md-11 col-md-offset-1 col-lg-10 col-lg-offset-2 rusky text-left">
         <div class="">
           <h2 class="chapter">A LITTLE ABOUT ME</h2>
           <h3>And why I am your new secret weapon</h3>

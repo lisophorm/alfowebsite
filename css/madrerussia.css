@@ -6978,12 +6978,14 @@ figure:hover img {
 .green h1, .green .h1, .green h2, .green .h2, .green h3, .green .h3, .green h4, .green .h4, .green h5, .green .h5 {
 	text-shadow: #0C7B2A .01em .01em 0, #0C7B2A .02em .02em 0, #0C7B2A .03em .03em 0, #0C7B2A .04em .04em 0, #0C7B2A .05em .05em 0, #0C7B2A .06em .06em 0, #0C7B2A .07em .07em 0, #0C7B2A .08em .08em 0, #0C7B2A .09em .09em 0, #0C7B2A .1em .1em 0;
 }
-.blue {
-	background: #23869D;
+.red {
+	background-color: #FD4747;
 	color: #fff;
+	background-image: url(../img/red.png);
+	background-repeat: repeat;
 }
-.jumbotron.blue::after {
-	box-shadow: inset 0 0 100px 50px #23869D;
+.jumbotron.red::after {
+	box-shadow: inset 0 0 100px 50px #cc0000;
 }
 .blue h1, .blue .h1, .blue h2, .blue .h2, .blue h3, .blue .h3, .blue h4, .blue .h4, .blue h5, .blue .h5 {
 	text-shadow: #0B5566 .01em .01em 0, #0B5566 .02em .02em 0, #0B5566 .03em .03em 0, #0B5566 .04em .04em 0, #0B5566 .05em .05em 0, #0B5566 .06em .06em 0, #0B5566 .07em .07em 0, #0B5566 .08em .08em 0, #0B5566 .09em .09em 0, #0B5566 .1em .1em 0;
@@ -6997,11 +6999,11 @@ figure:hover img {
 }
 .jumbo-icon {
 	padding: 50px;
-	background: #fff;
+/*	background: #fff;
 	background: rgba(255,255,255,0.85);
 	-webkit-border-radius: 100%;
 	-moz-border-radius: 100%;
-	border-radius: 100%;
+	border-radius: 100%;*/
 	display: inline-block;
 }
 .jumbo-icon-home {
