@@ -125,18 +125,18 @@ $(document).ready(function(e) {
     var time = 500;
 
 
-
-
-    setTimeout(handleSkills, 300);
-});
-
 $(window).on("resize", function(event) {
     console.log("SMARTRESIZE the dize");
 
 
     handleSkills();
 
-}).trigger('resize');;
+}).trigger('resize');
+
+    setTimeout(handleSkills, 300);
+});
+
+
 
 function handleSkills() {
     var sizeinem = parseFloat($('#stretchme').css('font-size')) / 1.7;
@@ -174,3 +174,30 @@ $( window ).resize(function() {
 	console.log("RESIZE the dize is:"+sizeinem);
 	$(".rotoskills").css('font-size',Math.floor(sizeinem)+"px");
 });*/
+
+(function( $ ) {
+ 
+    $.fn.fonzPreload = function() {
+ 
+        this.filter( "img" ).each(function() {
+            var img = $( this );
+            img.css("opacity","0.5");
+        });
+ 
+        return this;
+ 
+    };
+ 
+}( jQuery ));
+
+(function($) {
+
+    $.fn.helloWorld = function() {
+
+        this.each( function() {
+            $(this).text("Hello, World!");
+        });
+
+    }
+
+}(jQuery));

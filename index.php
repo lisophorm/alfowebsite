@@ -23,7 +23,7 @@
 <link rel="stylesheet" type="text/css" href="css/stripes.css">
 <!--link rel="stylesheet" type="text/css" href="fonts/font.css"-->
 <link rel="stylesheet" type="text/css" href="css/fonts.css">
-<link href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/red/pace-theme-minimal.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/madrerussia.css">
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -45,12 +45,21 @@
     <!--/.nav-collapse --> 
   </div>
 </nav>
-<header id="home" class="hero-unit">
-  <div class="container">
+<header class="jumbotron blue rusky" id="home">
     <div id="skillbit"> <span class="rotoskills">CREATIVE&nbsp;TECHNOLOGIST,SOFTWARE&nbsp;ARCHITECT,LEAD&nbsp;DEVELOPER</span> </div>
+
+  <div class="">
     <div class="row">
-      <div class="col-md-4" id="imgcol"><img id="alfo" class="img-responsive" src="img/alfocenteredl.png" width="720" height="491" alt="" /> </div>
-      <div class="col-md-8 text-center" id="textcol">
+
+      <div class="col-md-4 text-center">
+        <div class="jumbo-icon jumbo-icon-home" >
+          <img id="alfo" class="img-responsive" src="img/alfocenteredl.png" alt="" />
+        </div>
+        <div class="sunburst">
+          <div class="outer"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> </div>
+        </div>
+      </div>
+            <div class="col-md-8 text-center" id="textcol">
         <div id="title">
           <h1 id="stretchme">ALFONSO FLORIO</h1>
         </div>
@@ -58,6 +67,7 @@
     </div>
   </div>
 </header>
+
 <section id="frivolo">
   <div class="row text-center">
     <div class="col-md-12 text-center"> <img class="mg-responsive col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5" src="img/rockinyourbrand.png" alt="" /> </div>
@@ -224,30 +234,17 @@ foreach ($files as $file) {
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.fittext.js"></script> 
 <script src="js/jquery.debouncedresize.js"></script> 
 <script src="js/jquery.simple-text-rotator.js"></script> 
 <script src="js/jqBootstrapValidation.js"></script> 
 <script src="js/anim.js"></script> 
-<script>
-        paceOptions = {
 
-            startOnPageLoad: false,
-			restartOnPushState: false,
-            ajax: false, // disabled
-            document: false, // disabled
-            eventLag: true, // disabled
-            elements: {
-                selectors: ['.bxslider','.portfolio-img']
-            }
-        };
-    </script> 
-<script src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script> 
 <script src="pagination/jquery.twbsPagination.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/animate.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.0.2/wow.min.js">
-</script> <script src="js/jquery.animate-enhanced.min.js"></script> 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/wow/1.0.2/wow.min.js"></script>
+<script src="js/jquery.animate-enhanced.min.js"></script> 
 <script type="text/javascript">
         wow = new WOW({
             boxClass: 'wow', // default
@@ -258,9 +255,8 @@ foreach ($files as $file) {
         })
         wow.init();
     </script> 
-<script src="//cdn.jsdelivr.net/velocity/1.2.1/velocity.min.js"></script><script src="js/jquery.montage.js"></script> 
-<script src="zoomzoom/jquery.zoomooz.min.js"></script> 
-<script src="js/portfolio.js"></script> 
-<script src="js/alfonso.js"></script>
+<!--script src="js/velocity.js"></script-->
+<script src="js/jquery.montage.js"></script> 
+
 </body>
 </html>
