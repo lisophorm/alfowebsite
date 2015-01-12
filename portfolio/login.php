@@ -53,7 +53,7 @@ if (isset($_POST['passwd'])) {
   $MM_redirecttoReferrer = false;
   mysql_select_db($database_localhost, $localhost);
   
-  $LoginRS__query=sprintf("SELECT password FROM `access` WHERE password=%s",
+  $LoginRS__query=sprintf("SELECT passwd FROM `access` WHERE passwd=%s",
     GetSQLValueString($password, "text")); 
    
   $LoginRS = mysql_query($LoginRS__query, $localhost) or die(mysql_error());

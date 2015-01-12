@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Alfonso Florio">
 <title>Alfonso Florio - Software Architect / Lead Developer / Creative Technologist</title>
 
 <!-- Bootstrap -->
@@ -23,6 +25,7 @@
 <link rel="stylesheet" type="text/css" href="css/stripes.css">
 <!--link rel="stylesheet" type="text/css" href="fonts/font.css"-->
 <link rel="stylesheet" type="text/css" href="css/fonts.css">
+<link rel="stylesheet" type="text/css" href="css/lightbox.css">
 <link rel="stylesheet" type="text/css" href="css/madrerussia.css">
 </head>
 
@@ -45,14 +48,15 @@
     <!--/.nav-collapse --> 
   </div>
 </nav>
-<header class="jumbotron red" id="home">
     <div id="skillbit"> <span class="rotoskills">CREATIVE&nbsp;TECHNOLOGIST,SOFTWARE&nbsp;ARCHITECT,LEAD&nbsp;DEVELOPER</span> </div>
+
+<header class="jumbotron red" id="home">
 
   <div class="">
     <div class="row">
 
-      <div class="col-sx-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-2 text-center">
-        <div class="jumbo-icon jumbo-icon-home" >
+      <div id="imgcol" class="col-sx-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-2 text-center">
+        <div class="jumbo-icon" >
           <img id="alfo" class="img-responsive" src="img/alfocenteredl.png" alt="" />
         </div>
         <div class="sunburst">
@@ -110,15 +114,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-7 col-md-offset-1 col-lg-6 col-lg-offset-2">
-      <p><img src="img/punta.png" width="22" height="26" alt=""/>Seven years in experiential marketing solutions</p>
-      <p>Bridges the gap between technical and creative</p>
-      <p>Good team manager</p>
-      <p>Guarantees excellence in high pressure situations</p>
-      <p>Designs and delivers mission critical / fail safe solutions</p>
-      <p>Thinks outside the box and brings fresh ideas</p>
-      <p>Making technology simple for the consumer</p>
-      <p>Neapolitan passion for ideas</p>
+    <div class="col-md-7 col-md-offset-1 col-lg-5 col-lg-offset-2">
+      <ul>
+        <li>Seven years in experiential marketing solutions</li>
+        <li>Bridges the gap between technical and creative</li>
+        <li>Good team manager</li>
+        <li>Guarantees excellence in high pressure situations</li>
+        <li>Designs and delivers mission critical / fail safe solutions</li>
+        <li>Thinks outside the box and brings fresh ideas</li>
+        <li>Making technology simple for the consumer</li>
+        <li>Neapolitan passion for ideas</li>
+      </ul>
     </div>
     <div class="col-md-3"><img class="img-responsive center-block" src="img/leaky_pad.png" alt="" /> </div>
   </div>
@@ -230,19 +236,19 @@ foreach ($files as $file) {
   </div>
 </section>
 </div>
-
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script src="js/jquery.fittext.js"></script> 
 <script src="js/jquery.debouncedresize.js"></script> 
-<script src="js/jquery.simple-text-rotator.js"></script> 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/simple-text-rotator/1.0.0/jquery.simple-text-rotator.min.js"></script> 
 <script src="js/jqBootstrapValidation.js"></script> 
 <script src="js/anim.js"></script> 
 
 <script src="pagination/jquery.twbsPagination.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/wow/1.0.2/wow.min.js"></script>
 <script src="js/jquery.animate-enhanced.min.js"></script> 
 <script type="text/javascript">
@@ -255,8 +261,14 @@ foreach ($files as $file) {
         })
         wow.init();
     </script> 
-<!--script src="js/velocity.js"></script-->
-<script src="js/jquery.montage.js"></script> 
-
+<script src="js/velocity.js"></script>
+<script src="js/cycle/jquery.cycle2.core.js"></script>
+<script src="js/cycle/jquery.cycle2.center.js"></script>
+<script src="js/cycle/jquery.cycle2.scrollVert.js"></script>
+<script src="js/cycle/jquery.cycle2.autoheight.js"></script>
+<script src="js/cycle/jquery.cycle2.carousel.js"></script>
+<script src="js/cycle/jquery.cycle2.progressive.js"></script>
+<script src="js/alfonso.js"></script>
+<script src="js/portfolio.js"></script>
 </body>
 </html>

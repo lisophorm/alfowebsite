@@ -76,15 +76,14 @@ function loadCase(page, event) {
         setTimeout(function() {
 
             console.log("loading pagina:" + page);
-            $("#protetto").load("portfolio/portfolio.php?id=" + page, function() {
+            $("#protetto").load("portfolio/portfolio.php?id=" + page, function(data) {
+				console.log(data);
 			 var theOffset = parseInt($("#protettowipe").offset().top)-(parseInt($("#navstripe").height())*1.5);
 	
 			$('html, body').stop().animate({
 				scrollTop:theOffset+"px"
 			}, 500,function() {
-				console.log("before pace:" + page);
-       			 Pace.restart();
-        		console.log("pace restart:" + page);
+
 			});				
 
 				
@@ -109,7 +108,26 @@ function loadCase(page, event) {
 
                 $("#passwordform").collapse();
 
+				preloadCompleto();
+				
+				$("#slide-column").height($("#slide-column").width());
+				
+				$(".cycle-slideshow img").height($("#slide-column").height());	
+				$(".side-slideshow img").width($("#thumbscolumn").width());
+				$(".side-slideshow").cycle("reinit");
+				$(".cycle-slideshow").cycle("reinit");
 
+				$(".side-slideshow").height($("#slide-column").width());
+$( '.side-slideshow' ).on( 'cycle-update-view', function(event, optionHash, slideOptionsHash, currentSlideEl) {
+    //console.log("************* side slide update");
+	$(".gino").css("opacity",1);
+});				
+				$.getScript( "http://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.js", function( data, textStatus, jqxhr ) {
+  console.log( data ); // Data returned
+  console.log( textStatus ); // Success
+  console.log( jqxhr.status ); // 200
+  console.log( "Load was performed." );
+});
             });
 
         }, 300);
@@ -156,7 +174,19 @@ $(document).ready(function(e) {
     $(".whitebox").animate({
         opacity: 0.5
     });
-    $("#protetto").load("portfolio/portfolio.php?id=0");
+    $("#protetto").load("portfolio/portfolio.php?id=1",function() {
+				$(".side-slideshow").cycle();
+				$( '.side-slideshow' ).on( 'cycle-update-view', function(event, optionHash, slideOptionsHash, currentSlideEl) {
+    //console.log("************* side slide update");
+});
+				$(".cycle-slideshow").cycle({
+					    centerHorz: true,
+    					centerVert: true
+				});
+		console.log("end page.load in portfolio.js");
+		
+		
+	});
     $('#pagination-demo').twbsPagination({
         totalPages: 35,
         visiblePages: 7,
@@ -172,20 +202,27 @@ $(document).ready(function(e) {
     });
 
 
-    Pace.on('done', function() {
+
+
+});
+
+function preloadCompleto() {
+	
         console.log("pace done");
         //$(".preloaderbox").fadeOut(300);
         $("#protettowipe").collapse();
         $(".whitebox").animate({
             opacity: 1
         });
+		
+
         /*	$('.bxslider').bxSlider({
 					adaptiveHeight:true,
 					responsive:true,
                     auto: true,
                     controls:false
                 });*/
-
+/*
 
         $('.bxslider').montage({
             maxh: 140,
@@ -199,13 +236,6 @@ $(document).ready(function(e) {
 
         $(".portfolio-img").click(function() {
             console.log("you clicked img");
-
-
-
-
-            /*								        $('html, body').animate({
-                        scrollTop: theHeight+"px"
-                    }, 500);*/
 
 
             if ($(this).hasClass("selectedZoomTarget")) {
@@ -222,17 +252,10 @@ $(document).ready(function(e) {
         });
 
 
+*/
 
-
-    });
-
-    Pace.on('restart', function() {
-        console.log("pace restart");
-        //$(".preloaderbox").fadeOut(300);
-        //$(".whitebox").animate({ opacity: 1});
-    });
-
-});
+    
+}
 
 function endZoom() {
     console.log("endzoom");

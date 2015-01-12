@@ -124,9 +124,27 @@ $(document).ready(function(e) {
 
     var time = 500;
 
+$(window).on("orientationchange",function(event){
+      console.log("ORIENTATION CHANGE the dize");
+	
+	// for portfolio keeps it squared
+	
+					$("#slide-column").height($("#slide-column").width());
+				
+				$(".cycle-slideshow img").height($("#slide-column").height());	
+
+
+    handleSkills();
+});
 
 $(window).on("resize", function(event) {
     console.log("SMARTRESIZE the dize");
+	
+	// for portfolio keeps it squared
+	
+					$("#slide-column").height($("#slide-column").width());
+				
+				$(".cycle-slideshow img").height($("#slide-column").height());	
 
 
     handleSkills();
@@ -139,7 +157,7 @@ $(window).on("resize", function(event) {
 
 
 function handleSkills() {
-    var sizeinem = parseFloat($('#stretchme').css('font-size')) / 1.7;
+    var sizeinem = parseFloat($('#stretchme').css('font-size')) / 2.3;
     console.log("RESIZE the dize is:" + sizeinem);
     $(".rotoskills").css('font-size', Math.floor(sizeinem) + "px");
 
