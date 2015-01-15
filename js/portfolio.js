@@ -107,8 +107,6 @@ function loadCase(page, event) {
 
 
                 $("#passwordform").collapse();
-
-				preloadCompleto();
 				
 				$("#slide-column").height($("#slide-column").width());
 				
@@ -206,14 +204,35 @@ $(document).ready(function(e) {
 
 });
 
-function preloadCompleto() {
-	
-        console.log("pace done");
+$( document ).on( "portFolioEvent", {
+    foo: "bar"
+}, function( event, arg1, arg2 ) {
+    console.log( "********** PORTFOLO EVENYT FIRED" ); // "bar"
+	$(window).trigger("resize");
+				$("#slide-column").height($("#slide-column").width());
+				
+				$(".cycle-slideshow img").height($("#slide-column").height());	
+				$(".side-slideshow img").width($("#thumbscolumn").width());
+
+
+				$(".side-slideshow").height($("#slide-column").width());
+				
+		console.log("pace done");
         //$(".preloaderbox").fadeOut(300);
         $("#protettowipe").collapse();
         $(".whitebox").animate({
             opacity: 1
         });
+});
+
+function discoverSlide() {
+	console.load("********** bbig first image loaded");
+	$(window).trigger("resize");
+}
+
+function preloadCompleto() {
+	
+
 		
 
         /*	$('.bxslider').bxSlider({

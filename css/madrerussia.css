@@ -64,16 +64,16 @@ figcaption .h4 {
 	-webkit-border-radius: 100%;
 	-moz-border-radius: 100%;
 	border-radius: 100%;*/
-	display: inline-block;
+/*	display: inline-block;*/
 }
 .jumbo-icon-home {
 	display: block;
 	margin-top: -10px;
 }
-.jumbo-icon-home>.jumbo-icon-inner {
+/*.jumbo-icon-home>.jumbo-icon-inner {
 	position: relative;
 	margin: -40px -70px;
-}
+}*/
 .jumbotron {
 	/*-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
@@ -115,6 +115,12 @@ figcaption .h4 {
 	height: 4000px;
 	padding-top: 2180px;
 	margin: -2000px 0 0 -2000px;
+	
+	
+		animation-name: rotate1;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
 	-webkit-animation-name: rotate1;
 	-webkit-animation-duration: 2s;
 	-webkit-animation-iteration-count: infinite;
@@ -123,6 +129,8 @@ figcaption .h4 {
 	-moz-animation-duration: 2s;
 	-moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: linear;
+	
+
 }
 .sunburst span {
 	border-width: 180px 2000px;
@@ -136,39 +144,70 @@ figcaption .h4 {
 .sunburst span:nth-child(1) {
 	-webkit-transform: rotate(20deg);
 	-moz-transform: rotate(20deg);
+	-ms-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	transform: rotate(20deg);
 }
 .sunburst span:nth-child(2) {
 	-webkit-transform: rotate(40deg);
 	-moz-transform: rotate(40deg);
+	-ms-transform: rotate(40deg);
+	-o-transform: rotate(40deg);
+	transform: rotate(40deg);
 }
 .sunburst span:nth-child(3) {
 	-webkit-transform: rotate(60deg);
 	-moz-transform: rotate(60deg);
+	-ms-transform: rotate(60deg);
+	-o-transform: rotate(60deg);
+	transform: rotate(60deg);
 }
 .sunburst span:nth-child(4) {
 	-webkit-transform: rotate(80deg);
 	-moz-transform: rotate(80deg);
+	-ms-transform: rotate(80deg);
+	-o-transform: rotate(80deg);
+	transform: rotate(80deg);
 }
 .sunburst span:nth-child(5) {
 	-webkit-transform: rotate(100deg);
 	-moz-transform: rotate(100deg);
+	-ms-transform: rotate(100deg);
+	-o-transform: rotate(100deg);
+	transform: rotate(100deg);
 }
 .sunburst span:nth-child(6) {
 	-webkit-transform: rotate(120deg);
 	-moz-transform: rotate(120deg);
+	-ms-transform: rotate(120deg);
+	-o-transform: rotate(120deg);
+	transform: rotate(120deg);
 }
 .sunburst span:nth-child(7) {
 	-webkit-transform: rotate(140deg);
 	-moz-transform: rotate(140deg);
+	-ms-transform: rotate(140deg);
+	-o-transform: rotate(140deg);
+	transform: rotate(140deg);
 }
 .sunburst span:nth-child(8) {
 	-webkit-transform: rotate(160deg);
 	-moz-transform: rotate(160deg);
+	-ms-transform: rotate(160deg);
+	-o-transform: rotate(160deg);
+	transform: rotate(160deg);
 }
 .sunburst span:nth-child(9) {
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
 }
+
+
+
+
 @-webkit-keyframes rotate1 {
  from {
 -webkit-transform: rotate(0deg);
@@ -185,7 +224,16 @@ figcaption .h4 {
 -moz-transform: rotate(20deg);
 }
 }
+@keyframes rotate1 {
+ from {
 
+	transform: rotate(0deg);
+}
+ to {
+
+	transform: rotate(20deg);
+}
+}
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
 }

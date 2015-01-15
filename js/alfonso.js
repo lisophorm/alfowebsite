@@ -87,7 +87,19 @@ $(window).on('load', function() {
     });
 });
 
+
+function analitico(e) {
+	console.log("clicked any link"+$(this).attr("href"));
+}
+
+$( document ).ajaxComplete(function() {
+  $( ".log" ).text( "Triggered ajaxComplete handler." );
+  	$("body").on("click", "a", null, analitico);
+});
+
 $(document).ready(function(e) {
+	
+	$("body").on("click", "a", null, analitico);
 
 
     $("#navbar").on("click", "a", null, function() {
@@ -116,7 +128,8 @@ $(document).ready(function(e) {
     console.log("the dize is:" + sizeinem);
     $(".rotoskills").css('font-size', Math.floor(sizeinem) + "px");
     $(".rotoskills").textrotator({
-        separator: ","
+        separator: ",",
+		speed: 4000
     });
     var debug = $(".rotoskills").html();
     console.log(debug);
@@ -162,12 +175,12 @@ function handleSkills() {
     $(".rotoskills").css('font-size', Math.floor(sizeinem) + "px");
 
 
-    $('.servicebits').width($(".row").width());
+/*    $('.servicebits').width($(".row").width());
     $('#skillbit').width($(".row").width());
     var skillBitHeight = parseInt($("#home").outerHeight());
     var blokkoHeight = parseInt($(".rotoskills").outerHeight());
     console.log("HEIGHT of HOME is:" + skillBitHeight);
-    $("#skillbit").css('top', skillBitHeight - (blokkoHeight / 2));
+    $("#skillbit").css('top', skillBitHeight - (blokkoHeight / 2));*/
 
     var offpic = parseInt($("#imgcol").offset().top);
     var offimg = parseInt($("#textcol").offset().top);

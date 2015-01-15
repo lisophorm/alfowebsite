@@ -26,7 +26,7 @@
 <!--link rel="stylesheet" type="text/css" href="fonts/font.css"-->
 <link rel="stylesheet" type="text/css" href="css/fonts.css">
 <link rel="stylesheet" type="text/css" href="css/lightbox.css">
-<link rel="stylesheet" type="text/css" href="css/madrerussia.css">
+<link rel="stylesheet" type="text/css" href="css/madrerussia.css"><link rel="stylesheet" type="text/css" href="stuf/ripcss/fonts.css">
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -37,7 +37,7 @@
       <a class="navbar-brand" href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="#home">Home</a> </li>
+        <li  class="active"><a class="page-scroll" href="#home">Home</a> </li>
         <li><a class="page-scroll" href="#about">About</a> </li>
         <li><a class="page-scroll" href="#strenghts">My Strenghts</a> </li>
         <li><a class="page-scroll" href="#skills">My Skills</a> </li>
@@ -48,7 +48,6 @@
     <!--/.nav-collapse --> 
   </div>
 </nav>
-    <div id="skillbit"> <span class="rotoskills">CREATIVE&nbsp;TECHNOLOGIST,SOFTWARE&nbsp;ARCHITECT,LEAD&nbsp;DEVELOPER</span> </div>
 
 <header class="jumbotron red" id="home">
 
@@ -56,16 +55,18 @@
     <div class="row">
 
       <div id="imgcol" class="col-sx-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-2 text-center">
-        <div class="jumbo-icon" >
-          <img id="alfo" class="img-responsive" src="img/alfocenteredl.png" alt="" />
+        <div class="jumbo-icon text-center" >
+          <img id="alfo" class="img-responsive center-block" src="img/alfocenteredl.png" alt="" />
         </div>
         <div class="sunburst">
           <div class="outer"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> </div>
         </div>
       </div>
-            <div class="col-sx-12 col-sm-12 col-md-6 col-lg-6 text-center" id="textcol">
+            <div class="col-sx-12 col-sm-12 col-md-5 col-lg-5 text-center" id="textcol">
         <div id="title">
           <h1 id="stretchme">ALFONSO FLORIO</h1>
+              <div id="skillbit"> <span class="rotoskills">CREATIVE&nbsp;TECHNOLOGIST,SOFTWARE&nbsp;ARCHITECT,LEAD&nbsp;DEVELOPER</span> </div>
+
         </div>
       </div>
     </div>
@@ -98,7 +99,7 @@
       <p>Nothing gives me greater pleasure than seeing the end result of late night programming coming to life in a moment of joy when a consumer engages with one of my creations.</p>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 text-center"> <img class="img-responsive" src="img/lovethebomb.png" alt="" />
-      <button class="btn btn-1 btn-1a btn-large img-responsive">DOWNLOAD MY CV</button>
+      <a href="#downloadcv" class="btn btn-1 btn-1a btn-large img-responsive" role="button">DOWNLOAD MY CV</a>
     </div>
   </div>
 </section>
@@ -107,15 +108,17 @@
     <div class="row">
       <div class="col-s-12 col-md-11 col-lg-10 rusky text-right ">
         <div class="">
-          <h2 class="chapter">MY STRENGHTS</h2>
-          <h3>&quot;attention to detail&quot; - really you want to read that?</h3>
+          <h2 class="chapter">MY STRENGHTS - I AM PLUG & PLAY</h2>
+          <h3>&quot;attention to detail&quot; - really you want to read that again?</h3>
         </div>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-7 col-md-offset-1 col-lg-5 col-lg-offset-2">
+    <h1>And I'm fun to work with.</h1>
       <ul>
+        <li><strong>Plug & play consultant</strong>: swift to to integrate with your workflow and understand your methods</li>
         <li>Seven years in experiential marketing solutions</li>
         <li>Bridges the gap between technical and creative</li>
         <li>Good team manager</li>
@@ -228,8 +231,10 @@ foreach ($files as $file) {
     <div class="col-xs-12 col-md-4 col-md-push-4 text-center">
       <h2>LET'S DO THIS</h2>
       <a role="button" href="mailto:lisophorm@gmail.com" class="btn btn-1 btn-1a btn-large">Get in touch</a></div>
-    <div class="col-md-3 col-md-pull-3 col-xs-4 col-sm-4  text-center"> <img src="img/dobbsapproved.png" class="center-block img-responsive" alt=""/></div>
-    <div class="col-md-3 col-md-push-1 col-xs-4 col-sm-4 text-center"> <img src="img/dobbsapproved.png" class="center-block img-responsive" alt=""/> </div>
+    <div class="col-md-3 col-md-pull-3 col-xs-4 col-sm-4"> <img src="img/dobbsapproved.png" class="center-block img-responsive" alt=""/></div>
+    <div class="col-xs-4 col-sm-4 col-md-3 col-md-push-1">		
+      <img src="img/lasagna.jpg" alt="My lasagne" class="img-responsive img-circle" data-src="holder.js/300x300">
+</div>
   </div>
   <div class="row">
     <div class="col-md-12 text-center line-top">41 Albany Close N15 3RG - London / ph 07404 189935 / <a href="mailto:lisophorm@gmail.com">lisophorm@gmail.com</a> </div>
@@ -268,6 +273,7 @@ foreach ($files as $file) {
 <script src="js/cycle/jquery.cycle2.autoheight.js"></script>
 <script src="js/cycle/jquery.cycle2.carousel.js"></script>
 <script src="js/cycle/jquery.cycle2.progressive.js"></script>
+<script src="js/cycle/jquery.cycle2.loader.js"></script>
 <script src="js/alfonso.js"></script>
 <script src="js/portfolio.js"></script>
 </body>

@@ -254,10 +254,7 @@ section.module.parallax-4 {
 }
 
 #skillbit {
-	position: absolute;
-	top: 300px;
 	text-align: center;
-	z-index:10;
 }
 .skew3 {
 	-webkit-transform: rotate(-1deg) skew(-1deg, 0);
@@ -272,6 +269,17 @@ section.module.parallax-4 {
 	margin-bottom: 1.5em;
 	padding:0.5em;
 	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+.fun {
+	margin-top:4em;
+	display:inline;
+	padding:0.1em;
+	font-size:2em;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	color: #ffffff;
+	background-image: url(../img/red.png);
 }
 .vertical-center {
 	display: table;
