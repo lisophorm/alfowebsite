@@ -89,7 +89,21 @@ $(window).on('load', function() {
 
 
 function analitico(e) {
-	console.log("clicked any link"+$(this).attr("href"));
+	var host="/unknown";
+	if($(this).attr("data-virtualurl")) {
+		host=$(this).attr("data-virtualurl");
+		console.log("virtual directory:"+host);
+	} else if($(this).attr("href")) {
+		host=$(this).attr("href").replace("\#","/");
+		console.log("directory con #:"+host);
+	} else {
+		host="/"+escape($(this).html());
+		console.log("html:"+host);
+
+	}
+	
+	ga('send', 'pageview','/homepage');
+	
 }
 
 $( document ).ajaxComplete(function() {

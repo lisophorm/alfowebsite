@@ -172,7 +172,7 @@ $(document).ready(function(e) {
     $(".whitebox").animate({
         opacity: 0.5
     });
-    $("#protetto").load("portfolio/portfolio.php?id=1",function() {
+    $("#protetto").load("portfolio/portfolio.php?id=0",function() {
 				$(".side-slideshow").cycle();
 				$( '.side-slideshow' ).on( 'cycle-update-view', function(event, optionHash, slideOptionsHash, currentSlideEl) {
     //console.log("************* side slide update");
@@ -279,3 +279,5 @@ function preloadCompleto() {
 function endZoom() {
     console.log("endzoom");
 }
+
+loader = new SVGLoader( document.getElementById( 'loader' ), { speedIn : 100 } );

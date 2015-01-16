@@ -92,6 +92,9 @@ header h1 {
 	text-shadow: 2px 2px 0px black;
 }
 body {
+	margin:0px;
+	padding:0px;
+	height:100%;
 	font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
 	/*font-family: 'GothamBook';*/
 	text-shadow: 0 0 1px rgba(0,0,0,0.3);
@@ -222,6 +225,10 @@ header {
 	background-color: #FF0004;
 }
 section.module.parallax {
+	margin-left:0px;
+	padding-left:0px;
+	margin-right:0px;
+	padding-right:0px;
 	background-position: 0 0;
 }
 section.module.parallax-1 {

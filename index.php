@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Alfonso Florio - Software Architect / Lead Developer / Creative Technologist">
     <meta name="author" content="Alfonso Florio">
-<title>Alfonso Florio - Software Architect / Lead Developer / Creative Technologist</title>
+<title>Alfonso Florio personal website - Software Architect / Lead Developer / Creative Technologist</title>
 
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,6 +27,18 @@
 <link rel="stylesheet" type="text/css" href="css/fonts.css">
 <link rel="stylesheet" type="text/css" href="css/lightbox.css">
 <link rel="stylesheet" type="text/css" href="css/madrerussia.css"><link rel="stylesheet" type="text/css" href="stuf/ripcss/fonts.css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-48327879-1', 'auto');
+ga('require', 'displayfeatures');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview','/homepage');
+
+</script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -98,8 +110,8 @@
       <p>My work and that of my team has <strong>won numerous international awards</strong> and recognition and has achieved amplification of campaigns that largely exceeds the standard 175 impressions per published post.</p>
       <p>Nothing gives me greater pleasure than seeing the end result of late night programming coming to life in a moment of joy when a consumer engages with one of my creations.</p>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 text-center"> <img class="img-responsive" src="img/lovethebomb.png" alt="" />
-      <a href="#downloadcv" class="btn btn-1 btn-1a btn-large img-responsive" role="button">DOWNLOAD MY CV</a>
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 text-center"> <img class="img-responsive center-block" src="img/lovethebomb.png" alt="" />
+      <a href="http://localhost/alfofinal/download.php?file=Alfonso_Florio_CV.pdf" data-virtualurl="/downloadCV" class="btn btn-1 btn-1a btn-large img-responsive" role="button">DOWNLOAD MY CV</a>
     </div>
   </div>
 </section>
@@ -116,7 +128,7 @@
   </div>
   <div class="row">
     <div class="col-md-7 col-md-offset-1 col-lg-5 col-lg-offset-2">
-    <h1>And I'm fun to work with.</h1>
+    
       <ul>
         <li><strong>Plug & play consultant</strong>: swift to to integrate with your workflow and understand your methods</li>
         <li>Seven years in experiential marketing solutions</li>
@@ -128,6 +140,9 @@
         <li>Making technology simple for the consumer</li>
         <li>Neapolitan passion for ideas</li>
       </ul>
+      <div class="funtowork">
+        <h1>And I'm fun to work with.</h1>
+      </div>
     </div>
     <div class="col-md-3"><img class="img-responsive center-block" src="img/leaky_pad.png" alt="" /> </div>
   </div>
@@ -167,8 +182,6 @@
   </div>
 </section>
 <section id="portfolio" class="module parallax parallax-3">
-  <div class="zoomViewport">
-    <div class="zoomContainer">
       <div class="wow slideInLeft" data-wow-duration="1s" data-wow-delay="1s">
         <div class="row">
           <div class="col-s-12 col-md-11 col-lg-10 rusky text-right">
@@ -178,7 +191,7 @@
         </div>
       </div>
       <div class="row">
-        <div id="passwordform" class="col-xs-12 col-sm-6 col-sm-offset-2 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5 collapse in">
+        <div id="passwordform" class="col-xs-10 col-sm-10 col-xs-offset-1 col-sm-offset-1 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5 collapse in">
           <form name="passwordfom1" id="passwordfom1" novalidate>
             <div class="row">
               <div class="form-groupfloating-label-form-group controls">
@@ -223,17 +236,15 @@ foreach ($files as $file) {
           </div>
         </div>
       </div>
-    </div>
-  </div>
 </section>
 <section id="contact" class="module parallax parallax-4">
   <div class="row">
     <div class="col-xs-12 col-md-4 col-md-push-4 text-center">
       <h2>LET'S DO THIS</h2>
-      <a role="button" href="mailto:lisophorm@gmail.com" class="btn btn-1 btn-1a btn-large">Get in touch</a></div>
-    <div class="col-md-3 col-md-pull-3 col-xs-4 col-sm-4"> <img src="img/dobbsapproved.png" class="center-block img-responsive" alt=""/></div>
-    <div class="col-xs-4 col-sm-4 col-md-3 col-md-push-1">		
-      <img src="img/lasagna.jpg" alt="My lasagne" class="img-responsive img-circle" data-src="holder.js/300x300">
+      <a role="button" href="mailto:lisophorm@gmail.com" data-virtualurl="/sendEmail" class="btn btn-1 btn-1a btn-large">Get in touch</a><br/><br/></div>
+    <div class="col-xs-6 col-md-4 col-md-pull-4"> <img src="img/dobbsapproved.png" class="center-block img-responsive" alt=""/></div>
+    <div class="col-xs-6 col-md-4">		
+    <img src="img/peraspera.png" alt="My lasagne" class="img-responsive img-circle" data-src="holder.js/300x300">
 </div>
   </div>
   <div class="row">
@@ -241,6 +252,14 @@ foreach ($files as $file) {
   </div>
 </section>
 </div>
+
+			<div id="loader" class="pageload-overlay" data-opening="M20,15 50,30 50,30 30,30 Z;M0,0 80,0 50,30 20,45 Z;M0,0 80,0 60,45 0,60 Z;M0,0 80,0 80,60 0,60 Z" data-closing="M0,0 80,0 60,45 0,60 Z;M0,0 80,0 50,30 20,45 Z;M20,15 50,30 50,30 30,30 Z;M30,30 50,30 50,30 30,30 Z">
+				<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+					<path d="M30,30 50,30 50,30 30,30 Z"/>
+				</svg>
+			</div><!-- /pageload-overlay -->
+			
+
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
