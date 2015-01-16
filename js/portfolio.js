@@ -76,6 +76,7 @@ function loadCase(page, event) {
         setTimeout(function() {
 
             console.log("loading pagina:" + page);
+			loader.show();
             $("#protetto").load("portfolio/portfolio.php?id=" + page, function(data) {
 				console.log(data);
 			 var theOffset = parseInt($("#protettowipe").offset().top)-(parseInt($("#navstripe").height())*1.5);
@@ -223,11 +224,13 @@ $( document ).on( "portFolioEvent", {
         $(".whitebox").animate({
             opacity: 1
         });
+		loader.hide();
 });
 
 function discoverSlide() {
 	console.load("********** bbig first image loaded");
 	$(window).trigger("resize");
+	
 }
 
 function preloadCompleto() {
@@ -281,3 +284,4 @@ function endZoom() {
 }
 
 loader = new SVGLoader( document.getElementById( 'loader' ), { speedIn : 100 } );
+loader.show();

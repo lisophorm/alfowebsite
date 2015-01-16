@@ -6,7 +6,7 @@ date_default_timezone_set('Europe/London');
 
 class picoStats {
 	var $hostname="localhost";	// MySQL Hostname
-	var $username="bug01_gino";	// MySQL Username
+	var $username="bug01";	// MySQL Username
 	var $password="k0st0golov";	// MySQL Password
 	var $database="bug01_portfolio";	// MySQL Database
 	var $currentID="";

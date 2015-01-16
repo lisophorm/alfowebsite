@@ -51,6 +51,7 @@ $(document).ready(function() {
 var theColors = ["#E74F13", "#DB5714", "#E62914", "#DC3709", "#D92D17", "#F7673B", "#EA6D43", "#E23212", "#EE553A", "#EC713C", "#E1510E", "#DC4918", "#EA2F1A", "#D34C12", "#EB0F0F"];
 
 $(window).on('load', function() {
+	loader.hide();
     var $body = $('body'),
         $navtop = $('#navbar'),
         offset = $navtop.outerHeight();
@@ -102,12 +103,16 @@ function analitico(e) {
 
 	}
 	
-	ga('send', 'pageview','/homepage');
+	ga('send', 'pageview',host);
+	$.post( "trackaction.php", { uri: host} );
 	
 }
 
 $( document ).ajaxComplete(function() {
   $( ".log" ).text( "Triggered ajaxComplete handler." );
+  
+  $("body").off("click", "a", null, analitico);
+  
   	$("body").on("click", "a", null, analitico);
 });
 

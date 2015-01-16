@@ -7,7 +7,7 @@
     <meta name="description" content="Alfonso Florio - Software Architect / Lead Developer / Creative Technologist">
     <meta name="author" content="Alfonso Florio">
 <title>Alfonso Florio personal website - Software Architect / Lead Developer / Creative Technologist</title>
-
+<script src="js/snap.svg-min.js"></script>
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -26,7 +26,8 @@
 <!--link rel="stylesheet" type="text/css" href="fonts/font.css"-->
 <link rel="stylesheet" type="text/css" href="css/fonts.css">
 <link rel="stylesheet" type="text/css" href="css/lightbox.css">
-<link rel="stylesheet" type="text/css" href="css/madrerussia.css"><link rel="stylesheet" type="text/css" href="stuf/ripcss/fonts.css">
+<link rel="stylesheet" type="text/css" href="css/madrerussia.css">
+<link rel="stylesheet" type="text/css" href="css/component.css">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -40,8 +41,9 @@ ga('send', 'pageview','/homepage');
 
 </script>
 </head>
-
+ c
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<div id="pagewrap" class="pagewrap">
 <nav id="navstripe" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -74,7 +76,7 @@ ga('send', 'pageview','/homepage');
           <div class="outer"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> </div>
         </div>
       </div>
-            <div class="col-sx-12 col-sm-12 col-md-5 col-lg-5 text-center" id="textcol">
+            <div class="col-sx-12 col-sm-12 col-md-6 col-lg-6 text-center" id="textcol">
         <div id="title">
           <h1 id="stretchme">ALFONSO FLORIO</h1>
               <div id="skillbit"> <span class="rotoskills">CREATIVE&nbsp;TECHNOLOGIST,SOFTWARE&nbsp;ARCHITECT,LEAD&nbsp;DEVELOPER</span> </div>
@@ -120,7 +122,7 @@ ga('send', 'pageview','/homepage');
     <div class="row">
       <div class="col-s-12 col-md-11 col-lg-10 rusky text-right ">
         <div class="">
-          <h2 class="chapter">MY STRENGHTS - I AM PLUG & PLAY</h2>
+          <h2 class="chapter">MY STRENGHTS</h2>
           <h3>&quot;attention to detail&quot; - really you want to read that again?</h3>
         </div>
       </div>
@@ -141,7 +143,8 @@ ga('send', 'pageview','/homepage');
         <li>Neapolitan passion for ideas</li>
       </ul>
       <div class="funtowork">
-        <h1>And I'm fun to work with.</h1>
+        <h1>and it's fun to work with me!</h1>
+        <p>&nbsp;</p>
       </div>
     </div>
     <div class="col-md-3"><img class="img-responsive center-block" src="img/leaky_pad.png" alt="" /> </div>
@@ -212,7 +215,7 @@ ga('send', 'pageview','/homepage');
               <div class="preloaderbox" style="display:none;"></div>
               <div id="protetto"> </div>
             </div>
-            <div class="row" id="portfoliopaginator">
+            <div class="row collapse" id="portfoliopaginator">
               <ul id="pagination-demo" class="pagination-lg">
               </ul>
             </div>
@@ -239,11 +242,11 @@ foreach ($files as $file) {
 </section>
 <section id="contact" class="module parallax parallax-4">
   <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-push-4 text-center">
+    <div class="col-xs-10 col-xs-push-1 col-md-4 col-md-push-4 text-center">
       <h2>LET'S DO THIS</h2>
       <a role="button" href="mailto:lisophorm@gmail.com" data-virtualurl="/sendEmail" class="btn btn-1 btn-1a btn-large">Get in touch</a><br/><br/></div>
-    <div class="col-xs-6 col-md-4 col-md-pull-4"> <img src="img/dobbsapproved.png" class="center-block img-responsive" alt=""/></div>
-    <div class="col-xs-6 col-md-4">		
+    <div class="col-xs-5 col-sm-3 col-md-4 col-md-pull-4"> <img src="img/dobbsapproved.png" class="center-block img-responsive" alt=""/></div>
+    <div class="col-xs-7 col-md-3 col-lg-2">		
     <img src="img/peraspera.png" alt="My lasagne" class="img-responsive img-circle" data-src="holder.js/300x300">
 </div>
   </div>
@@ -253,11 +256,13 @@ foreach ($files as $file) {
 </section>
 </div>
 
-			<div id="loader" class="pageload-overlay" data-opening="M20,15 50,30 50,30 30,30 Z;M0,0 80,0 50,30 20,45 Z;M0,0 80,0 60,45 0,60 Z;M0,0 80,0 80,60 0,60 Z" data-closing="M0,0 80,0 60,45 0,60 Z;M0,0 80,0 50,30 20,45 Z;M20,15 50,30 50,30 30,30 Z;M30,30 50,30 50,30 30,30 Z">
-				<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
-					<path d="M30,30 50,30 50,30 30,30 Z"/>
+			<div id="loader" class="pageload-overlay show" data-opening="M -18 -26.90625 L -18 86.90625 L 98 86.90625 L 98 -26.90625 L -18 -26.90625 Z M 40 29.96875 C 40.01804 29.96875 40.03125 29.98196 40.03125 30 C 40.03125 30.01804 40.01804 30.03125 40 30.03125 C 39.98196 30.03125 39.96875 30.01804 39.96875 30 C 39.96875 29.98196 39.98196 29.96875 40 29.96875 Z">
+				<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="xMidYMid slice">
+					<path d="M -18 -26.90625 L -18 86.90625 L 98 86.90625 L 98 -26.90625 L -18 -26.90625 Z M 40 -25.6875 C 70.750092 -25.6875 95.6875 -0.7500919 95.6875 30 C 95.6875 60.750092 70.750092 85.6875 40 85.6875 C 9.2499078 85.6875 -15.6875 60.750092 -15.6875 30 C -15.6875 -0.7500919 9.2499078 -25.6875 40 -25.6875 Z"/>
 				</svg>
 			</div><!-- /pageload-overlay -->
+			
+		</div><!-- /pagewrap -->
 			
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -293,6 +298,8 @@ foreach ($files as $file) {
 <script src="js/cycle/jquery.cycle2.carousel.js"></script>
 <script src="js/cycle/jquery.cycle2.progressive.js"></script>
 <script src="js/cycle/jquery.cycle2.loader.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/svgLoader.js"></script>
 <script src="js/alfonso.js"></script>
 <script src="js/portfolio.js"></script>
 </body>
