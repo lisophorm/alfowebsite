@@ -373,12 +373,11 @@ $.fn.cycle.API = {
         var curr = $(currEl), next = $(nextEl);
         var fn = function() {
             // make sure animIn has something so that callback doesn't trigger immediately
-			console.dir(next);
             next.animate(opts.animIn || { opacity: 1}, opts.speed, opts.easeIn || opts.easing, callback);
         };
 
         next.css(opts.cssBefore || {});
-		console.log("curr sarebbed:"+curr);
+
         curr.animate(opts.animOut || {}, opts.speed, opts.easeOut || opts.easing, function() {
             curr.css(opts.cssAfter || {});
             if (!opts.sync) {

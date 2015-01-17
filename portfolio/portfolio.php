@@ -146,7 +146,6 @@ header('Content-Type: text/html;charset=UTF-8');
     data-cycle-fx="carousel" 
     data-cycle-timeout="1000" 
     data-cycle-carousel-visible="6" 
-    data-cycle-loader="wait"
     data-cycle-slides="> li" ><?php
 $files = glob(GetSQLValueString($colname_getcase, "int")."/*.{png,jpg,jpeg,JPG}", GLOB_BRACE);
 shuffle($files); 
@@ -157,14 +156,14 @@ if(count($files)>0) {
 	
 	list($width, $height, $type, $attr) = getimagesize("$file");
 	//class=\"portfolio-img\" width=\"$width\" height=\"$height\"
-    print "<li class=\"case-item\"><a class=\"litto\" data-lightbox=\"gino\" href=\"portfolio/$file\"><img class=\"img-responsive\"  src=\"timthumb.php?src=alfonso/portfolio/$file&w=250\" /></a></li>";
+    print "<li class=\"case-item\"><a class=\"litto\" data-toggle=\"lightbox\" data-gallery=\"gallery_$colname_getcase\" href=\"portfolio/$file\"><img class=\"img-responsive\"  src=\"timthumb.php?src=alfonso/portfolio/$file&w=250\" /></a></li>";
 
     if(count($files)>0) {
 		$imgblock=array();
 
 		 		foreach ($files as $file) {
 					
-			    $imgblock[]=  "<li class=\"case-item\"><a data-lightbox=\"gino\" href=\"portfolio/$file\"><img class=\"img-responsive\"  src=\"timthumb.php?src=alfonso/portfolio/$file&w=250\" /></a></li>";
+			    $imgblock[]=  "<li class=\"case-item\"><a data-toggle=\"lightbox\" data-gallery=\"gallery_$colname_getcase\" href=\"portfolio/$file\"><img class=\"img-responsive\"  src=\"timthumb.php?src=alfonso/portfolio/$file&w=250\" /></a></li>";
 
 
 		}
@@ -174,7 +173,11 @@ if(count($files)>0) {
 		
 	} 
 } else {
-	    print " <a><img src=\"http://dummyimage.com/800x600/0a0/fff?gino=".rand()."\"  /></a>";
+		print "<li class=\"case-item\"><a data-toggle=\"lightbox\" data-gallery=\"gallery_$colname_getcase\" href=\"#\"><img class=\"img-responsive\"  src=\"http://dummyimage.com/300x200/0a0/fff?gino=".rand()."\" /></a></li>";
+		print "<li class=\"case-item\"><a data-toggle=\"lightbox\" data-gallery=\"gallery_$colname_getcase\" href=\"#\"><img class=\"img-responsive\"  src=\"http://dummyimage.com/300x200/0a0/fff?gino=".rand()."\" /></a></li>";
+		print "<li class=\"case-item\"><a data-toggle=\"lightbox\" data-gallery=\"gallery_$colname_getcase\" href=\"#\"><img class=\"img-responsive\"  src=\"http://dummyimage.com/300x200/0a0/fff?gino=".rand()."\" /></a></li>";
+		print "<li class=\"case-item\"><a data-toggle=\"lightbox\" data-gallery=\"gallery_$colname_getcase\" href=\"#\"><img class=\"img-responsive\"  src=\"http://dummyimage.com/300x200/0a0/fff?gino=".rand()."\" /></a></li>";
+	     
 
 }
 ?>
@@ -190,7 +193,8 @@ $files = glob(GetSQLValueString($colname_getcase, "int")."/*.{png,jpg,jpeg,JPG}"
 shuffle($files); 
 if(count($files)>0) {
 	$file=array_pop($files);
-	print "<img  src=\"portfolio/$file\" onload='$(document).trigger(\"portFolioEvent\");' />";
+	list($width, $height, $type, $attr) = getimagesize("$file");
+	print "<img src=\"timthumb.php?src=alfonso/portfolio/$file&w=700&h=700\" onload='$(document).trigger(\"portFolioEvent\",10);' />";
 }
 if(count($files)>0) {
 foreach ($files as $file) {
@@ -199,7 +203,7 @@ foreach ($files as $file) {
 	
 	list($width, $height, $type, $attr) = getimagesize("$file");
 	//class=\"portfolio-img\" width=\"$width\" height=\"$height\"
-    print "<img  src=\"portfolio/$file\" />";
+    print "<img src=\"timthumb.php?src=alfonso/portfolio/$file&w=700&h=700\" />";
 	//for ($i = 1; $i <= 5; $i++) {
     //print " <li><img src=\"http://lorempixel.com/800/600/?gino=".rand()."\"  class=\"img-responsive\" /></li>";
 }} else {

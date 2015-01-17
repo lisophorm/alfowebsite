@@ -4,13 +4,13 @@
 $(document).ready(function() {
 
     var jcarOffset = parseInt($(".jcarousel img").width());
-    console.log("looping animate loop" + jcarOffset);
+    
     $(".jcarousel").css("left", "-" + jcarOffset + "px");
     //$(".jcarousel").animate({left:jcarOffset},1000);
 
 
     animate_loop = function animate_loop() {
-        console.log("looping animate loop");
+        
         var jcarOffset = $(".jcarousel img").width();
         $(".jcarousel").animate({
             left: "0px"
@@ -93,16 +93,16 @@ function analitico(e) {
 	var host="/unknown";
 	if($(this).attr("data-virtualurl")) {
 		host=$(this).attr("data-virtualurl");
-		console.log("virtual directory:"+host);
+		
 	} else if($(this).attr("href")) {
 		host=$(this).attr("href").replace("\#","/");
-		console.log("directory con #:"+host);
+		
 	} else {
 		host="/"+escape($(this).html());
-		console.log("html:"+host);
+		
 
 	}
-	
+	console.log("analytic call:"+host);
 	ga('send', 'pageview',host);
 	$.post( "trackaction.php", { uri: host} );
 	
@@ -122,12 +122,12 @@ $(document).ready(function(e) {
 
 
     $("#navbar").on("click", "a", null, function() {
-        console.log("navbar clicked");
+        
         $("#navbar").collapse("hide");
     });
 
     $("#navbar").find("a").bind('click', function(event) {
-        console.log("scroll the page");
+        
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
@@ -137,14 +137,14 @@ $(document).ready(function(e) {
 
     setInterval(function() {
         var off = $("#alfo").offset();
-        //console.log("alfonsi si trova:"+off.left+"-"+off.top);
+        //
         var wid = $("#alfo").width();
         var heig = $("#alfo").height();
     }, 100);
 
     $("#stretchme").fitText(0.7);
     var sizeinem = parseFloat($('#stretchme').css('font-size')) / 2;
-    console.log("the dize is:" + sizeinem);
+    
     $(".rotoskills").css('font-size', Math.floor(sizeinem) + "px");
     $(".rotoskills").textrotator({
         separator: ",",
@@ -157,7 +157,7 @@ $(document).ready(function(e) {
     var time = 500;
 
 $(window).on("orientationchange",function(event){
-      console.log("ORIENTATION CHANGE the dize");
+      
 	
 	// for portfolio keeps it squared
 	
@@ -170,7 +170,7 @@ $(window).on("orientationchange",function(event){
 });
 
 $(window).on("resize", function(event) {
-    console.log("SMARTRESIZE the dize");
+    
 	
 	// for portfolio keeps it squared
 	
@@ -190,7 +190,7 @@ $(window).on("resize", function(event) {
 
 function handleSkills() {
     var sizeinem = parseFloat($('#stretchme').css('font-size')) / 2.3;
-    console.log("RESIZE the dize is:" + sizeinem);
+    
     $(".rotoskills").css('font-size', Math.floor(sizeinem) + "px");
 
 
@@ -198,7 +198,7 @@ function handleSkills() {
     $('#skillbit').width($(".row").width());
     var skillBitHeight = parseInt($("#home").outerHeight());
     var blokkoHeight = parseInt($(".rotoskills").outerHeight());
-    console.log("HEIGHT of HOME is:" + skillBitHeight);
+    
     $("#skillbit").css('top', skillBitHeight - (blokkoHeight / 2));*/
 
     var offpic = parseInt($("#imgcol").offset().top);
@@ -214,14 +214,14 @@ function handleSkills() {
         $("#title").css("margin-top", "0px");
     }
 
-    console.log("Offset of pic:" + $("#imgcol").offset().top);
-    console.log("offset of text:" + $("#textcol").offset().top);
+    
+    
 }
 
 /*
 $( window ).resize(function() {
 	var sizeinem=parseFloat($('#stretchme').css('font-size')) / 2;
-	console.log("RESIZE the dize is:"+sizeinem);
+	
 	$(".rotoskills").css('font-size',Math.floor(sizeinem)+"px");
 });*/
 

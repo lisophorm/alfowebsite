@@ -53,7 +53,6 @@ $(document).on( 'cycle-pre-initialize', function( e, opts ) {
         var contH = opts.container.height();
         var w = slide.outerWidth();
         var h = slide.outerHeight();
-		console.log("largh:"+w+" alt:"+h);
      //   if (w) {
         //    if (opts.centerHorz && w <= contW)
                 slide.css( 'marginLeft', (contW - w) / 2 );

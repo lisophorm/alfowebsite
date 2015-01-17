@@ -1,10 +1,10 @@
-.container {
+/*.container {
 	display: none;
 }
 
 .container.show {
 	display: block;
-}
+}*/
 
 .pageload-overlay {
 	position: fixed;
@@ -32,7 +32,7 @@
 
 .pageload-overlay::after,
 .pageload-overlay::before {
-	content: '';
+	content: 'ciao';
 	position: fixed;
 	width: 20px;
 	height: 20px;
@@ -42,7 +42,7 @@
 	border-radius: 50%;
 	visibility: hidden;
 	opacity: 0;
-	z-index: 1000;
+	z-index: 9999;
 	-webkit-transition: opacity 0.15s, visibility 0s 0.15s;
 	transition: opacity 0.15s, visibility 0s 0.15s;
 }

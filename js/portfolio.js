@@ -6,7 +6,7 @@ $(function() {
             // additional error messages or events
         },
         submitSuccess: function($form, event) {
-            console.log("inside press password");
+            
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
             var password = $("#passwordfield").val();
@@ -20,7 +20,7 @@ $(function() {
                 cache: false
             }).done(function(data) {
                 if (data == "SUCCSSS") {
-                    console.log("pwd success");
+                    
                     $("#passwordform").collapse();
                     //$('#mycarousel').carousel('cycle');
                     //$("#contento").collapse();
@@ -45,18 +45,7 @@ $(function() {
 
 function loadCase(page, event) {
         //$(".preloaderbox").fadeIn(300);
-        console.log("loadcase pagina:" + page);
-        if (page == 0) {
-            console.log("page > 0");
-            $(".whitebox").animate({
-                opacity: 1
-            }, function() {
-                console.log("whitepage very first page=0");
-            });
 
-        } else {
-
-        }
         if (event) {
             event.preventDefault();
         }
@@ -65,20 +54,15 @@ function loadCase(page, event) {
                  scrollTop: $("#protetto").offset().top-100
              }, 1500, 'easeInOutExpo');*/
         console.log("loadcase:" + page);
-        $(".whitebox").clearQueue();
-        $(".whitebox").stop();
 
-        $(".whitebox").animate({
-            opacity: 0
-        }, 300);
 
         //$("#portfoliolink").delay( 1000).trigger("click").delay( 300).trigger("click");
         setTimeout(function() {
 
-            console.log("loading pagina:" + page);
+
 			loader.show();
             $("#protetto").load("portfolio/portfolio.php?id=" + page, function(data) {
-				console.log(data);
+
 			 var theOffset = parseInt($("#protettowipe").offset().top)-(parseInt($("#navstripe").height())*1.5);
 	
 			$('html, body').stop().animate({
@@ -89,7 +73,7 @@ function loadCase(page, event) {
 
 				
                 $(".pager li a").click(function(e) {
-                    console.log("click on pafgintio pager");
+                    
                     history.pushState(null, null, $(this).attr('href'));
 
                 });
@@ -104,7 +88,7 @@ function loadCase(page, event) {
                     $(".next").trigger("click");
 
                 });
-                console.log("ciao caro");
+                
 
 
                 $("#passwordform").collapse();
@@ -118,20 +102,29 @@ function loadCase(page, event) {
 
 				$(".side-slideshow").height($("#slide-column").width());
 $( '.side-slideshow' ).on( 'cycle-update-view', function(event, optionHash, slideOptionsHash, currentSlideEl) {
-    //console.log("************* side slide update");
+    //
 	$(".gino").css("opacity",1);
 });				
-				$.getScript( "http://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.js", function( data, textStatus, jqxhr ) {
-  console.log( data ); // Data returned
-  console.log( textStatus ); // Success
-  console.log( jqxhr.status ); // 200
-  console.log( "Load was performed." );
-});
+
             });
 
         }, 300);
 
-        //$("#protettowipe").delay( 800 ).fadeOut( 400 );
+        				$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+					event.preventDefault();
+					return $(this).ekkoLightbox({
+						onShown: function() {
+							if (window.console) {
+								return console.log('Checking our the events huh?');
+							}
+						},
+						onNavigate: function(direction, itemIndex) {
+							if (window.console) {
+								return console.log('Navigating '+direction+'. Current item: '+itemIndex);
+							}
+						}
+					});
+				});
 
         $('#page-content').text('Page ' + page);
 
@@ -169,20 +162,17 @@ $('#name').focus(function() {
 });
 
 $(document).ready(function(e) {
-    // need this just to trigger event later 
-    $(".whitebox").animate({
-        opacity: 0.5
-    });
+
     $("#protetto").load("portfolio/portfolio.php?id=0",function() {
 				$(".side-slideshow").cycle();
 				$( '.side-slideshow' ).on( 'cycle-update-view', function(event, optionHash, slideOptionsHash, currentSlideEl) {
-    //console.log("************* side slide update");
+    //
 });
 				$(".cycle-slideshow").cycle({
 					    centerHorz: true,
     					centerVert: true
 				});
-		console.log("end page.load in portfolio.js");
+		
 		
 		
 	});
@@ -195,7 +185,7 @@ $(document).ready(function(e) {
         }
     });
     $('.pagination a').click(function(e) {
-        console.log("click on pafgintio next");
+        
         history.pushState(null, null, $(this).attr('href'));
 
     });
@@ -208,7 +198,7 @@ $(document).ready(function(e) {
 $( document ).on( "portFolioEvent", {
     foo: "bar"
 }, function( event, arg1, arg2 ) {
-    console.log( "********** PORTFOLO EVENYT FIRED" ); // "bar"
+    console.log( "********** PORTFOLO EVENYT FIRED:" + arg1 ); // "bar"
 	$(window).trigger("resize");
 				$("#slide-column").height($("#slide-column").width());
 				
@@ -218,12 +208,10 @@ $( document ).on( "portFolioEvent", {
 
 				$(".side-slideshow").height($("#slide-column").width());
 				
-		console.log("pace done");
+		
         //$(".preloaderbox").fadeOut(300);
         $("#protettowipe").collapse();
-        $(".whitebox").animate({
-            opacity: 1
-        });
+
 		loader.hide();
 });
 
@@ -257,11 +245,11 @@ function preloadCompleto() {
 
 
         $(".portfolio-img").click(function() {
-            console.log("you clicked img");
+            
 
 
             if ($(this).hasClass("selectedZoomTarget")) {
-                console.log("zoon target");
+                
             }
         });
         $(".portfolio-img").zoomTarget({
@@ -280,7 +268,7 @@ function preloadCompleto() {
 }
 
 function endZoom() {
-    console.log("endzoom");
+    
 }
 
 loader = new SVGLoader( document.getElementById( 'loader' ), { speedIn : 100 } );
