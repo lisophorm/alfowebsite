@@ -350,7 +350,7 @@ function log_error($error,$error_description="",$extrainfo="",$item_id=0) {
 	
 	
 }define("HOST","localhost");
-define("DBUSER","skyphoto_user");
+define("DBUSER","bug01");
 define("DBPASS","k0st0golov");
-define("DB","skyphoto_db");
+define("DB","bug01_portfolio");
 ?>

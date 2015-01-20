@@ -51,8 +51,8 @@ $(document).ready(function() {
 var theColors = ["#E74F13", "#DB5714", "#E62914", "#DC3709", "#D92D17", "#F7673B", "#EA6D43", "#E23212", "#EE553A", "#EC713C", "#E1510E", "#DC4918", "#EA2F1A", "#D34C12", "#EB0F0F"];
 
 $(window).on('load', function() {
-	loader.hide();
-    var $body = $('body'),
+	$("#loader").clearQueue().stop().slideUp();
+	    var $body = $('body'),
         $navtop = $('#navbar'),
         offset = $navtop.outerHeight();
 
@@ -95,7 +95,12 @@ function analitico(e) {
 		host=$(this).attr("data-virtualurl");
 		
 	} else if($(this).attr("href")) {
-		host=$(this).attr("href").replace("\#","/");
+		if(isLetter($(this).attr("href").charAt(0))) {
+			host="/"+$(this).attr("href");
+		} else {
+			host="/"+$(this).attr("href").substr(1)
+		}
+		
 		
 	} else {
 		host="/"+escape($(this).html());
@@ -108,13 +113,44 @@ function analitico(e) {
 	
 }
 
-$( document ).ajaxComplete(function() {
-  $( ".log" ).text( "Triggered ajaxComplete handler." );
-  
+function isLetter(str) {
+  return str.length === 1 && str.match(/[a-z]/i);
+}
+
+$( document ).ajaxComplete(function(event, xhr, settings) {
+console.log( "Triggered ajaxComplete handler url:" + settings.url);
+
+
+  if(settings.url) {
+	  if (settings.url.toLowerCase().indexOf("portfolio.php") >= 0) {
+		  console.log( "Portfolio page!" + settings.url);
+		  $(document).undelegate('*[data-toggle="lightbox"]', 'click', delegaLightBox);
+        	$(document).delegate('*[data-toggle="lightbox"]', 'click', delegaLightBox);
+	  }
+  }
+ 
   $("body").off("click", "a", null, analitico);
   
-  	$("body").on("click", "a", null, analitico);
+  $("body").on("click", "a", null, analitico);
 });
+
+function delegaLightBox(event) {
+	console.log("evento lightbox");
+					event.preventDefault();
+					return $(this).ekkoLightbox({
+						onShown: function() {
+							if (window.console) {
+								return console.log('Checking our the events huh?');
+							}
+						},
+						onNavigate: function(direction, itemIndex) {
+							if (window.console) {
+								return console.log('Navigating '+direction+'. Current item: '+itemIndex);
+							}
+						}
+					});
+				}
+
 
 $(document).ready(function(e) {
 	
@@ -163,10 +199,11 @@ $(window).on("orientationchange",function(event){
 	
 					$("#slide-column").height($("#slide-column").width());
 				
-				$(".cycle-slideshow img").height($("#slide-column").height());	
+
 
 
     handleSkills();
+	
 });
 
 $(window).on("resize", function(event) {
@@ -176,7 +213,7 @@ $(window).on("resize", function(event) {
 	
 					$("#slide-column").height($("#slide-column").width());
 				
-				$(".cycle-slideshow img").height($("#slide-column").height());	
+
 
 
     handleSkills();

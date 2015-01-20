@@ -127,10 +127,10 @@ header('Content-Type: text/html;charset=UTF-8');
       <nav>
         <ul class="pager">
           <?php if($colname_getcase>1) { ?>
-          <li><a class="prevcase btn btn-4 btn-4b icon-arrow-left" ><i class="fa fa-arrow-left"></i></a></li>
+          <li><a class="prevcase btn btn-4 btn-4b icon-arrow-left" data-virtualurl="/portfolio/<?php echo $colname_getcase-1; ?>" ><i class="fa fa-arrow-left"></i></a></li>
           <?php }
 		if (file_exists($colname_getcase+1)) { ?>
-          <li ><a class="nextcase btn btn-4 btn-4a icon-arrow-right"  ><i class="fa fa-arrow-right"></i></a></li>
+          <li ><a class="nextcase btn btn-4 btn-4a icon-arrow-right" data-virtualurl="/portfolio/<?php echo $colname_getcase+1; ?>"  ><i class="fa fa-arrow-right"></i></a></li>
           <?php } ?>
         </ul>
       </nav>
@@ -138,15 +138,7 @@ header('Content-Type: text/html;charset=UTF-8');
   </div>
   <!---->
   <div class="col-md-2 col-sm-6 col-xs-6" style="padding-left:0px;padding-right:0px;" id="thumbscolumn">
-    <ul class="side-slideshow" 
-    data-cycle-carousel-vertical="true"  
-    data-slide-active-class="gino-attivo" 
-    data-pause-on-hover="true"
-    data-slide-class="gino" 
-    data-cycle-fx="carousel" 
-    data-cycle-timeout="1000" 
-    data-cycle-carousel-visible="6" 
-    data-cycle-slides="> li" ><?php
+    <ul id="side-slideshow" ><?php
 $files = glob(GetSQLValueString($colname_getcase, "int")."/*.{png,jpg,jpeg,JPG}", GLOB_BRACE);
 shuffle($files); 
 if(count($files)>0) {
@@ -156,14 +148,14 @@ if(count($files)>0) {
 	
 	list($width, $height, $type, $attr) = getimagesize("$file");
 	//class=\"portfolio-img\" width=\"$width\" height=\"$height\"
-    print "<li class=\"case-item\"><a class=\"litto\" data-toggle=\"lightbox\" data-gallery=\"gallery_$colname_getcase\" href=\"portfolio/$file\"><img class=\"img-responsive\"  src=\"timthumb.php?src=alfonso/portfolio/$file&w=250\" /></a></li>";
+    print "<li class=\"case-item\"><a class=\"litto\" data-toggle=\"lightbox\" data-gallery=\"gallery_$colname_getcase\" href=\"portfolio/$file\"><img class=\"img-responsive\"  src=\"timthumb.php?src=alfofinal/portfolio/$file&w=250\" /></a></li>";
 
     if(count($files)>0) {
 		$imgblock=array();
 
 		 		foreach ($files as $file) {
 					
-			    $imgblock[]=  "<li class=\"case-item\"><a data-toggle=\"lightbox\" data-gallery=\"gallery_$colname_getcase\" href=\"portfolio/$file\"><img class=\"img-responsive\"  src=\"timthumb.php?src=alfonso/portfolio/$file&w=250\" /></a></li>";
+			    $imgblock[]=  "<li class=\"case-item\"><a class=\"lightboxlink\" data-toggle=\"lightbox\" data-gallery=\"gallery_$colname_getcase\" href=\"portfolio/$file\"><img src=\"timthumb.php?src=alfofinal/portfolio/$file&w=250\" /></a></li>";
 
 
 		}
@@ -186,15 +178,15 @@ if(count($files)>0) {
   </div>
 
   <div class="col-xs-6 col-sm-6 col-md-6" id="slide-column">
-    <div class="square-wrapper">
-      <div class="cycle-slideshow" data-cycle-center-horz="true" data-cycle-center-vert="true" data-cycle-loader="wait" >
+    <ul id="square-wrapper">
+
         <?php
 $files = glob(GetSQLValueString($colname_getcase, "int")."/*.{png,jpg,jpeg,JPG}", GLOB_BRACE);
 shuffle($files); 
 if(count($files)>0) {
 	$file=array_pop($files);
 	list($width, $height, $type, $attr) = getimagesize("$file");
-	print "<img src=\"timthumb.php?src=alfonso/portfolio/$file&w=700&h=700\" onload='$(document).trigger(\"portFolioEvent\",10);' />";
+	print "<li><img src=\"timthumb.php?src=alfofinal/portfolio/$file&w=700&h=700\" onload='$(document).trigger(\"portFolioEvent\",10);' /></li>";
 }
 if(count($files)>0) {
 foreach ($files as $file) {
@@ -203,16 +195,16 @@ foreach ($files as $file) {
 	
 	list($width, $height, $type, $attr) = getimagesize("$file");
 	//class=\"portfolio-img\" width=\"$width\" height=\"$height\"
-    print "<img src=\"timthumb.php?src=alfonso/portfolio/$file&w=700&h=700\" />";
+    print "<li><img src=\"timthumb.php?src=alfofinal/portfolio/$file&w=700&h=700\" /></li>";
 	//for ($i = 1; $i <= 5; $i++) {
     //print " <li><img src=\"http://lorempixel.com/800/600/?gino=".rand()."\"  class=\"img-responsive\" /></li>";
 }} else {
-	    print " <a><img src=\"http://dummyimage.com/800x600/0a0/fff?gino=".rand()."\"  /></a>";
+	    print "<li><a><img src=\"http://dummyimage.com/800x600/0a0/fff?gino=".rand()."\"  /></a></li>";
 
 }
 ?>
-      </div>
-    </div>
+
+    </ul>
   </div>
 </div>
 <?php

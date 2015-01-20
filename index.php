@@ -6,9 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Alfonso Florio - Software Architect / Lead Developer / Creative Technologist">
 <meta name="author" content="Alfonso Florio">
-<title>Alfonso Florio personal website - Software Architect / Lead Developer / Creative Technologist</title>
+<title>Alfonso Florio - Software Architect / Lead Developer / Creative Technologist</title>
 <link rel="stylesheet" type="text/css" href="css/component.css">
-<script src="js/snap.svg-min.js"></script>
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -25,10 +24,11 @@
 <link rel="stylesheet" type="text/css" href="css/textrotator.css">
 <link rel="stylesheet" type="text/css" href="css/stripes.css">
 <!--link rel="stylesheet" type="text/css" href="fonts/font.css"-->
-<link rel="stylesheet" type="text/css" href="css/fonts.css">
+<link rel="stylesheet" type="text/css" href="css/Whitneyfont.css">
 <link rel="stylesheet" type="text/css" href="css/ekko-lightbox.min.css">
 <link rel="stylesheet" type="text/css" href="css/madrerussia.css">
-
+<link rel="stylesheet" type="text/css" href="bxslider/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="stuf/akzident grotesque condensed.css">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -41,9 +41,11 @@ ga('require', 'linkid', 'linkid.js');
 ga('send', 'pageview','/homepage');
 
 </script>
+
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <div id="pagewrap" class="pagewrap">
+<div class="contenuto show">
   <nav id="navstripe" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -106,7 +108,7 @@ ga('send', 'pageview','/homepage');
         <p>My work and that of my team has <strong>won numerous international awards</strong> and recognition and has achieved amplification of campaigns that largely exceeds the standard 175 impressions per published post.</p>
         <p>Nothing gives me greater pleasure than seeing the end result of late night programming coming to life in a moment of joy when a consumer engages with one of my creations.</p>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 text-center"> <img class="img-responsive center-block" src="img/lovethebomb.png" alt="" /> <a href="http://localhost/alfofinal/download.php?file=Alfonso_Florio_CV.pdf" data-virtualurl="/downloadCV" class="btn btn-1 btn-1a btn-large img-responsive" role="button">DOWNLOAD MY CV</a> </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 text-center"> <img class="img-responsive center-block" src="img/lovethebomb.png" alt="" /> <a href="download.php?file=Alfonso_Florio_CV.pdf" data-virtualurl="/downloadCV" class="btn btn-1 btn-1a btn-large img-responsive" role="button">DOWNLOAD MY CV</a> </div>
     </div>
   </section>
   <section class="module parallax parallax-1" id="strenghts">
@@ -133,10 +135,7 @@ ga('send', 'pageview','/homepage');
           <li>Making technology simple for the consumer</li>
           <li>Neapolitan passion for ideas</li>
         </ul>
-        <div class="funtowork">
-          <h1>and it's fun to work with me!</h1>
-          <p>&nbsp;</p>
-        </div>
+        <div class="funtowork"><span>and it's fun to work with me!</span></div>
       </div>
       <div class="col-md-3"><img class="img-responsive center-block" src="img/leaky_pad.png" alt="" /> </div>
     </div>
@@ -199,7 +198,7 @@ ga('send', 'pageview','/homepage');
         </form>
       </div>
     </div>
-    <div class="row" id="protettowipe">
+    <div class="row collapse" id="protettowipe">
       <div class="">
         <div class="col-s-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
           <div class="whitebox">
@@ -245,13 +244,11 @@ foreach ($files as $file) {
     </div>
   </section>
 </div>
-<div id="loader" class="pageload-overlay show" data-opening="M -18 -26.90625 L -18 86.90625 L 98 86.90625 L 98 -26.90625 L -18 -26.90625 Z M 40 29.96875 C 40.01804 29.96875 40.03125 29.98196 40.03125 30 C 40.03125 30.01804 40.01804 30.03125 40 30.03125 C 39.98196 30.03125 39.96875 30.01804 39.96875 30 C 39.96875 29.98196 39.98196 29.96875 40 29.96875 Z"> <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="xMidYMid slice">
-  <path d="M -18 -26.90625 L -18 86.90625 L 98 86.90625 L 98 -26.90625 L -18 -26.90625 Z M 40 -25.6875 C 70.750092 -25.6875 95.6875 -0.7500919 95.6875 30 C 95.6875 60.750092 70.750092 85.6875 40 85.6875 C 9.2499078 85.6875 -15.6875 60.750092 -15.6875 30 C -15.6875 -0.7500919 9.2499078 -25.6875 40 -25.6875 Z"/>
-  </svg> </div>
-<!-- /pageload-overlay -->
+			<div id="loader" class="pageload-overlay" >
 
-</div>
-<!-- /pagewrap --> 
+			</div><!-- /pageload-overlay -->
+			
+		</div><!-- /pagewrap -->
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
@@ -278,15 +275,7 @@ foreach ($files as $file) {
         wow.init();
     </script> 
 <script src="js/velocity.js"></script> 
-<script src="js/cycle/jquery.cycle2.core.js"></script> 
-<script src="js/cycle/jquery.cycle2.center.js"></script> 
-<script src="js/cycle/jquery.cycle2.scrollVert.js"></script> 
-<script src="js/cycle/jquery.cycle2.autoheight.js"></script> 
-<script src="js/cycle/jquery.cycle2.carousel.js"></script> 
-<script src="js/cycle/jquery.cycle2.progressive.js"></script> 
-<script src="js/cycle/jquery.cycle2.loader.js"></script> 
-<script src="js/classie.js"></script> 
-<script src="js/svgLoader.js"></script> 
+<script src="bxslider/jquery.bxslider.js"></script>
 <script src="js/ekko-lightbox.min.js"></script> 
 <script src="js/alfonso.js"></script> 
 <script src="js/portfolio.js"></script>
