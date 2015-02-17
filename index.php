@@ -233,7 +233,8 @@ foreach ($files as $file) {
     <div class="row">
       <div class="col-xs-10 col-xs-push-1 col-md-4 col-md-push-4 text-center">
         <h2>LET'S DO THIS</h2>
-        <a role="button" href="mailto:lisophorm@gmail.com" data-virtualurl="/sendEmail" class="btn btn-1 btn-1a btn-large">Get in touch</a><br/>
+
+        <a role="button" href="#myModal" data-virtualurl="/sendEmail" data-toggle="modal" class="btn btn-1 btn-1a btn-large">Get in touch</a><br/>
         <br/>
       </div>
       <div class="col-xs-5 col-sm-3 col-md-4 col-md-pull-4"> <img src="img/dobbsapproved.png" class="center-block img-responsive" alt=""/></div>
@@ -249,7 +250,30 @@ foreach ($files as $file) {
 			</div><!-- /pageload-overlay -->
 			
 		</div><!-- /pagewrap -->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">We'd Love to Hear From You</h3>
+      </div>
+      <div class="modal-body">
+       <form name="myform" id="contactForm" data-async class="form-horizontal col-sm-12" action="sendcontact_eventi.php" enctype="multipart/form-data" method="post">
+								
 
+
+          <div class="form-group"><label>Gino</label><input class="form-control" required placeholder="Message" data-placement="top" data-trigger="manual" data-content="Must say something" name="emailBody" id="emailBody" type="text"></div>
+          <div class="form-group"><label>E-Mail</label><input class="form-control email" placeholder="email@you.com (so that we can contact you)" required data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" name="email" id="email" type="email"></div>
+
+          <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button><p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p></div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 

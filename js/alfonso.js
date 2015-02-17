@@ -288,3 +288,43 @@ $( window ).resize(function() {
     }
 
 }(jQuery));
+
+$(function () { $("#contactForm").find("input,textarea,select").jqBootstrapValidation(); } );
+
+$("#contactForm").submit(function(e) {
+	
+		var $form = $(this);
+        var $target = $($form.attr('data-target'));
+		var dato=$form.serialize();
+ 		console.log("contact form"+dato);
+        $.ajax({
+            type: $form.attr('method'),
+            url: $form.attr('action'),
+            data: $form.serialize(),
+ 
+            success: function(data, status) {
+                $target.html(data);
+            }
+        });
+    event.preventDefault();
+});
+   /* $('#contactForm').live('submit', function(event) {
+        var $form = $(this);
+        var $target = $($form.attr('data-target'));
+ 
+        $.ajax({
+            type: $form.attr('method'),
+            url: $form.attr('action'),
+            data: $form.serialize(),
+ 
+            success: function(data, status) {
+                $target.html(data);
+            }
+        });
+ 
+        event.preventDefault();
+    });*/
+
+
+
+
