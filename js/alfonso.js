@@ -301,12 +301,23 @@ $("#contactForm").submit(function(e) {
             type: $form.attr('method'),
             url: $form.attr('action'),
             data: $form.serialize(),
+			dataType:"text",
  
             success: function(data, status) {
-                $target.html(data);
+				console.log("output:"+data);
+                $("#justdoit").text(data);
+				$("#lurido").text("Please hit me again, I've been a bad buttons");
+				$("#lurido").addClass("disabled");
+				$(".modal").removeClass('in');
             }
         });
     event.preventDefault();
+});
+$("#cancella").click(function(e) {
+	ga('send', 'pageview','/cancelMessage');
+	$.post( "trackaction.php", { uri: '/cancelMessage'} );
+    $("#justdoit").text("PLEASE DON'T GO AWAY");
+	$("#lurido").text("Give me a second chance");
 });
    /* $('#contactForm').live('submit', function(event) {
         var $form = $(this);

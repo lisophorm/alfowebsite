@@ -56,7 +56,7 @@
 <file name="svgLoader.js" server="www.bug01.com//public_html/crystal-bits.co.uk/alfonso/" local="130658720483932002" remote="130659034200000000" Dst="1" />
 <file name="ekko-lightbox.min.js" server="C:/xamppok/htdocs/alfofinal/" local="130659259750469946" remote="130659259750000000" Dst="1" />
 <file name="alfonso - Copy.js" server="C:/xampp/htdocs/" local="130675632272240043" remote="130675632270000000" Dst="1" />
-<file name="alfonso.js" server="C:/xampp/htdocs/" local="130685564503219762" remote="130685564500000000" Dst="1" />
+<file name="alfonso.js" server="C:/xampp/htdocs/" local="130688451867099033" remote="130688451860000000" Dst="1" />
 <file name="anim.js" server="C:/xampp/htdocs/" local="130675632272250067" remote="130675632270000000" Dst="1" />
 <file name="bootstrap.js" server="C:/xampp/htdocs/" local="130675632272260194" remote="130675632270000000" Dst="1" />
 <file name="bootstrap.min.js" server="C:/xampp/htdocs/" local="130675632272270197" remote="130675632270000000" Dst="1" />
@@ -83,4 +83,32 @@
 <file name="snap.svg-min.js" server="C:/xampp/htdocs/" local="130675632272350253" remote="130675632270000000" Dst="1" />
 <file name="svgLoader.js" server="C:/xampp/htdocs/" local="130675632272350253" remote="130675632270000000" Dst="1" />
 <file name="velocity.js" server="C:/xampp/htdocs/" local="130675632272370272" remote="130675632270000000" Dst="1" />
+<file name="index8.html" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272280204" remote="130688316600000000" Dst="1" />
+<file name="alfonso - Copy.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272240043" remote="130688316600000000" Dst="1" />
+<file name="alfonso.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130688451867099033" remote="130688317200000000" Dst="1" />
+<file name="anim.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272250067" remote="130688317200000000" Dst="1" />
+<file name="bootstrap.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272260194" remote="130688317200000000" Dst="1" />
+<file name="bootstrap.min.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272270197" remote="130688317200000000" Dst="1" />
+<file name="classie.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272270197" remote="130688317200000000" Dst="1" />
+<file name="ekko-lightbox.min.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272270197" remote="130688317200000000" Dst="1" />
+<file name="endless.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272280204" remote="130688317200000000" Dst="1" />
+<file name="freelancer.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272280204" remote="130688317200000000" Dst="1" />
+<file name="isotope.pkgd.min.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272290211" remote="130688317200000000" Dst="1" />
+<file name="jqBootstrapValidation.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272290211" remote="130688317200000000" Dst="1" />
+<file name="jquery.animate-enhanced.min.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272300218" remote="130688317200000000" Dst="1" />
+<file name="jquery.colorbox-min.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272300218" remote="130688317200000000" Dst="1" />
+<file name="jquery.corner.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272300218" remote="130688317200000000" Dst="1" />
+<file name="jquery.debouncedresize.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272310229" remote="130688317200000000" Dst="1" />
+<file name="jquery.fittext.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272310229" remote="130688317200000000" Dst="1" />
+<file name="jquery.montage.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272310229" remote="130688317200000000" Dst="1" />
+<file name="jquery.montage.min.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272320232" remote="130688317200000000" Dst="1" />
+<file name="jquery.scale9grid-0.9.3.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272320232" remote="130688317200000000" Dst="1" />
+<file name="jquery.simple-text-rotator.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272330239" remote="130688317200000000" Dst="1" />
+<file name="masonry.pkgd.min.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272330239" remote="130688317200000000" Dst="1" />
+<file name="npm.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272330239" remote="130688317200000000" Dst="1" />
+<file name="pace.min.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272340246" remote="130688317200000000" Dst="1" />
+<file name="portfolio.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675640832922478" remote="130688317200000000" Dst="1" />
+<file name="snap.svg-min.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272350253" remote="130688317200000000" Dst="1" />
+<file name="svgLoader.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272350253" remote="130688317200000000" Dst="1" />
+<file name="velocity.js" server="www.bug01.com/public_html/crystal-bits.co.uk/" local="130675632272370272" remote="130688317200000000" Dst="1" />
 </dwsync>

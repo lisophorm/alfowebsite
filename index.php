@@ -41,7 +41,7 @@ ga('require', 'linkid', 'linkid.js');
 ga('send', 'pageview','/homepage');
 
 </script>
-
+<script src="//load.sumome.com/" data-sumo-site-id="60c752a21dde84fea4049acb99eff848abd1acd92427810f6207c0a812f4cdb5" async></script>
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <div id="pagewrap" class="pagewrap">
@@ -134,8 +134,9 @@ ga('send', 'pageview','/homepage');
           <li>Thinks outside the box and brings fresh ideas</li>
           <li>Making technology simple for the consumer</li>
           <li>Neapolitan passion for ideas</li>
+          <li>And it's fun to work with me!</li>
         </ul>
-        <div class="funtowork"><span>and it's fun to work with me!</span></div>
+       
       </div>
       <div class="col-md-3"><img class="img-responsive center-block" src="img/leaky_pad.png" alt="" /> </div>
     </div>
@@ -232,16 +233,16 @@ foreach ($files as $file) {
   <section id="contact" class="module parallax parallax-4">
     <div class="row">
       <div class="col-xs-10 col-xs-push-1 col-md-4 col-md-push-4 text-center">
-        <h2>LET'S DO THIS</h2>
+        <h2 id="justdoit">LET'S DO THIS</h2>
 
-        <a role="button" href="#myModal" data-virtualurl="/sendEmail" data-toggle="modal" class="btn btn-1 btn-1a btn-large">Get in touch</a><br/>
+        <a role="button" href="#myModal" id="lurido" data-virtualurl="/sendEmail" data-toggle="modal" class="btn btn-1 btn-1a btn-large">Get in touch</a><br/>
         <br/>
       </div>
       <div class="col-xs-5 col-sm-3 col-md-4 col-md-pull-4"> <img src="img/dobbsapproved.png" class="center-block img-responsive" alt=""/></div>
       <div class="col-xs-7 col-md-3 col-lg-2"> <img src="img/peraspera.png" alt="My lasagne" class="img-responsive img-circle" data-src="holder.js/300x300"> </div>
     </div>
     <div class="row">
-      <div class="col-md-12 text-center line-top">41 Albany Close N15 3RG - London / ph 07404 189935 / <a href="mailto:lisophorm@gmail.com">lisophorm@gmail.com</a> </div>
+      <div class="col-md-12 text-center line-top">feel free to stalk me: 41 Albany Close N15 3RG - London / ph 07404 189935 / <a href="mailto:lisophorm@gmail.com">lisophorm@gmail.com</a> </div>
     </div>
   </section>
 </div>
@@ -255,17 +256,15 @@ foreach ($files as $file) {
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">We'd Love to Hear From You</h3>
+        <h3 id="myModalLabel">Feel free to express yourself</h3>
       </div>
       <div class="modal-body">
-       <form name="myform" id="contactForm" data-async class="form-horizontal col-sm-12" action="sendcontact_eventi.php" enctype="multipart/form-data" method="post">
-								
+       <form name="myform" id="contactForm" data-async class="form-horizontal col-sm-12" action="contact/contact.php" enctype="multipart/form-data" method="post">
+<div class="form-group"><label>Your message</label><textarea class="form-control"  required placeholder="Type your message here" data-placement="top" data-trigger="manual" data-content="Must say something" name="emailBody" id="emailBody" type="text"></textarea></div>
+          <div class="form-group"><label>Your name</label><input class="form-control" placeholder="Just to break ice..." required data-placement="top" data-trigger="manual" name="sender" id="sender" type="text" ></div>
+          <div class="form-group"><label>E-Mail</label><input class="form-control email" placeholder="email@you.com (so that we can contact you)" required data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" name="email" id="email" type="email" ></div>
 
-
-          <div class="form-group"><label>Gino</label><input class="form-control" required placeholder="Message" data-placement="top" data-trigger="manual" data-content="Must say something" name="emailBody" id="emailBody" type="text"></div>
-          <div class="form-group"><label>E-Mail</label><input class="form-control email" placeholder="email@you.com (so that we can contact you)" required data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" name="email" id="email" type="email"></div>
-
-          <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button><p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p></div>
+          <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <button class="btn" data-virtualUrl="/cancelsend" href="/cancellaForm" id="cancella" data-dismiss="modal" aria-hidden="true">Cancel</button><p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p></div>
         </form>
       </div>
       <div class="modal-footer">
@@ -302,6 +301,6 @@ foreach ($files as $file) {
 <script src="bxslider/jquery.bxslider.js"></script>
 <script src="js/ekko-lightbox.min.js"></script> 
 <script src="js/alfonso.js"></script> 
-<script src="js/portfolio.js"></script>
+<script src="js/portfolio.js"></script>s
 </body>
 </html>
