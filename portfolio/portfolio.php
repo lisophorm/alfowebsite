@@ -136,7 +136,7 @@ header('Content-Type: text/html;charset=UTF-8');
       </nav>
     </div>
   </div>
-  <!---->
+
   <div class="col-md-2 col-sm-6 col-xs-6" style="padding-left:0px;padding-right:0px;" id="thumbscolumn">
     <ul id="side-slideshow" ><?php
 $files = glob(GetSQLValueString($colname_getcase, "int")."/*.{png,jpg,jpeg,JPG}", GLOB_BRACE);
@@ -148,14 +148,14 @@ if(count($files)>0) {
 	
 	list($width, $height, $type, $attr) = getimagesize("$file");
 	//class=\"portfolio-img\" width=\"$width\" height=\"$height\"
-    print "<li class=\"case-item\"><a class=\"litto\" data-toggle=\"lightbox\" data-gallery=\"gallery_$colname_getcase\" href=\"portfolio/$file\"><img class=\"img-responsive\"  src=\"timthumb.php?src=alfofinal/portfolio/$file&w=250\" /></a></li>";
+    print "<li class=\"case-item\"><a class=\"litto\" data-toggle=\"lightbox\" data-gallery=\"gallery_$colname_getcase\" href=\"portfolio/$file\"><img class=\"img-responsive\"  src=\"timthumb.php?src=/portfolio/$file&w=250\" /></a></li>";
 
     if(count($files)>0) {
 		$imgblock=array();
 
 		 		foreach ($files as $file) {
 					
-			    $imgblock[]=  "<li class=\"case-item\"><a class=\"lightboxlink\" data-toggle=\"lightbox\" data-gallery=\"gallery_$colname_getcase\" href=\"portfolio/$file\"><img src=\"timthumb.php?src=alfofinal/portfolio/$file&w=250\" /></a></li>";
+			    $imgblock[]=  "<li class=\"case-item\"><a class=\"lightboxlink\" data-toggle=\"lightbox\" data-gallery=\"gallery_$colname_getcase\" href=\"portfolio/$file\"><img src=\"timthumb.php?src=/portfolio/$file&w=250\" /></a></li>";
 
 
 		}
@@ -186,7 +186,7 @@ shuffle($files);
 if(count($files)>0) {
 	$file=array_pop($files);
 	list($width, $height, $type, $attr) = getimagesize("$file");
-	print "<li><img src=\"timthumb.php?src=alfofinal/portfolio/$file&w=700&h=700\" onload='$(document).trigger(\"portFolioEvent\",10);' /></li>";
+	print "<li><img src=\"timthumb.php?src=/portfolio/$file&w=700&h=700\" onload='$(document).trigger(\"portFolioEvent\",10);' /></li>";
 }
 if(count($files)>0) {
 foreach ($files as $file) {
@@ -195,7 +195,7 @@ foreach ($files as $file) {
 	
 	list($width, $height, $type, $attr) = getimagesize("$file");
 	//class=\"portfolio-img\" width=\"$width\" height=\"$height\"
-    print "<li><img src=\"timthumb.php?src=alfofinal/portfolio/$file&w=700&h=700\" /></li>";
+    print "<li><img src=\"timthumb.php?src=/portfolio/$file&w=700&h=700\" /></li>";
 	//for ($i = 1; $i <= 5; $i++) {
     //print " <li><img src=\"http://lorempixel.com/800/600/?gino=".rand()."\"  class=\"img-responsive\" /></li>";
 }} else {

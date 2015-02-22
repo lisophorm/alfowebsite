@@ -44,7 +44,7 @@ $(function() {
 });
 
 function loadCase(page, event) {
-        //$(".preloaderbox").fadeIn(300);
+        $("#loader").fadeIn(600);
 
         if (event) {
             event.preventDefault();
@@ -55,7 +55,7 @@ function loadCase(page, event) {
              }, 1500, 'easeInOutExpo');*/
         console.log("loadcase:" + page);
 
-		$("#loader").clearQueue().stop().slideUp();
+
         //$("#portfoliolink").delay( 1000).trigger("click").delay( 300).trigger("click");
         setTimeout(function() {
 
@@ -145,7 +145,7 @@ $( document ).on( "portFolioEvent", {
 	
     console.log( "********** PORTFOLO EVENYT FIRED:" + arg1 ); // "bar"
 							setTimeout( function() {
-								$("#loader").clearQueue().stop().slideUp();
+								$("#loader").fadeOut(600);
 
 							}, 1000 );
 	$(window).trigger("resize");
@@ -154,7 +154,7 @@ $( document ).on( "portFolioEvent", {
 
     $("#protettowipe").collapse();
 
-
+	
 });
 
 function discoverSlide() {
@@ -177,9 +177,11 @@ var squareSlider = 0;
 var stripeSlider = 0;
 
 function callSliders() {
-	if(squareSlider!=0) {
+	try {
 		squareSlider.destroySlider();
 		stripeSlider.destroySlider();
+	} catch (e) {
+		console.log("my first");
 	}
 	squareSlider=$("#square-wrapper").bxSlider({
 						pause: 5000,

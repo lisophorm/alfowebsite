@@ -1,7 +1,26 @@
+<?php header('Content-Type: text/html; charset=utf-8');
+include("./simplestats/simplestats.inc"); 
+
+require_once("./stats/stats.php");
+
+$stats=new picoStats();
+$stats->trackPage("alfonso","/",$_GET['ref']);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta property="og:image" content="http://www.crystal-bits.co.uk/img/alfoicon.jpg" />
+<meta property="og:title" content="Alfonso Florio - Software Architect / Lead Developer / Creative Technologist" />
+<meta property="og:url" content="http://www.crystal-bits.co.uk" />
+<meta property="og:description" content="An award winning software architect, creative technologist, and experimental artist with over 20 years of expertise in advertising, media and marketing." />
+<meta property="og:type" content="website" />
+<meta name="twitter:url" content="http://www.crystal-bits.co.uk">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:image" content="http://www.crystal-bits.co.uk/img/alfoicon.jpg" />
+<meta property="twitter:title" content="Alfonso Florio - Software Architect / Lead Developer / Creative Technologist" />
+<meta property="twitter:description" content="An award winning software architect, creative technologist, and experimental artist with over 20 years of expertise in advertising, media and marketing." />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Alfonso Florio - Software Architect / Lead Developer / Creative Technologist">
@@ -45,6 +64,8 @@ ga('send', 'pageview','/homepage');
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <div id="pagewrap" class="pagewrap">
+<div id="loader" class="pageload-overlay" > <img src="img/Preloader_7.gif" width="64" height="64" alt=""/> </div>
+		</div><!-- /pagewrap -->
 <div class="contenuto show">
   <nav id="navstripe" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -66,18 +87,18 @@ ga('send', 'pageview','/homepage');
   </nav>
   <!--div id="pagewrap" class="pagewrap"-->
   <header class="jumbotron red" id="home">
-    <div class="">
+    <div itemscope itemtype="http://data-vocabulary.org/Person">
       <div class="row">
         <div id="imgcol" class="col-sx-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-2 text-center">
-          <div class="jumbo-icon text-center" > <img id="alfo" class="img-responsive center-block" src="img/alfocenteredl.png" alt="" /> </div>
+          <div class="jumbo-icon text-center" > <img id="alfo" itemprop="photo" class="img-responsive center-block" src="img/alfocenteredl.png" alt="" /> </div>
           <div class="sunburst">
             <div class="outer"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> </div>
           </div>
         </div>
         <div class="col-sx-12 col-sm-12 col-md-6 col-lg-6 text-center" id="textcol">
-          <div id="title">
-            <h1 id="stretchme">ALFONSO FLORIO</h1>
-            <div id="skillbit"> <span class="rotoskills">CREATIVE&nbsp;TECHNOLOGIST,SOFTWARE&nbsp;ARCHITECT,LEAD&nbsp;DEVELOPER</span> </div>
+          <div id="title" >
+            <h1 id="stretchme" itemprop="name">ALFONSO FLORIO</h1>
+            <div id="skillbit"> <span class="rotoskills"><span>CREATIVE&nbsp;TECHNOLOGIST</span>,<span>SOFTWARE&nbsp;ARCHITECT</span>,<span>LEAD&nbsp;DEVELOPER</span></span> </div>
           </div>
         </div>
       </div>
@@ -246,11 +267,9 @@ foreach ($files as $file) {
     </div>
   </section>
 </div>
-			<div id="loader" class="pageload-overlay" >
 
-			</div><!-- /pageload-overlay -->
 			
-		</div><!-- /pagewrap -->
+
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -262,9 +281,9 @@ foreach ($files as $file) {
        <form name="myform" id="contactForm" data-async class="form-horizontal col-sm-12" action="contact/contact.php" enctype="multipart/form-data" method="post">
 <div class="form-group"><label>Your message</label><textarea class="form-control"  required placeholder="Type your message here" data-placement="top" data-trigger="manual" data-content="Must say something" name="emailBody" id="emailBody" type="text"></textarea></div>
           <div class="form-group"><label>Your name</label><input class="form-control" placeholder="Just to break ice..." required data-placement="top" data-trigger="manual" name="sender" id="sender" type="text" ></div>
-          <div class="form-group"><label>E-Mail</label><input class="form-control email" placeholder="email@you.com (so that we can contact you)" required data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" name="email" id="email" type="email" ></div>
+          <div class="form-group"><label>E-Mail</label><input class="form-control email" placeholder="email@you.com (I'll attend a mind reading seminar soon)" required data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" name="email" id="email" type="email" ></div>
 
-          <div class="form-group"><button type="submit" class="btn btn-success pull-right">Send It!</button> <button class="btn" data-virtualUrl="/cancelsend" href="/cancellaForm" id="cancella" data-dismiss="modal" aria-hidden="true">Cancel</button><p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p></div>
+          <div class="form-group"><button type="submit" class="btn btn-1 btn-1a btn-success pull-right">Send It!</button> <button class="btn btn-1 btn-1a" data-virtualUrl="/cancelsend" href="/cancellaForm" id="cancella" data-dismiss="modal" aria-hidden="true">Cancel</button><p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p></div>
         </form>
       </div>
       <div class="modal-footer">

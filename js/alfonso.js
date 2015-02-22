@@ -51,7 +51,8 @@ $(document).ready(function() {
 var theColors = ["#E74F13", "#DB5714", "#E62914", "#DC3709", "#D92D17", "#F7673B", "#EA6D43", "#E23212", "#EE553A", "#EC713C", "#E1510E", "#DC4918", "#EA2F1A", "#D34C12", "#EB0F0F"];
 
 $(window).on('load', function() {
-	$("#loader").clearQueue().stop().slideUp();
+	
+	$("#loader").stop().fadeOut(500);
 	    var $body = $('body'),
         $navtop = $('#navbar'),
         offset = $navtop.outerHeight();
@@ -135,9 +136,13 @@ console.log( "Triggered ajaxComplete handler url:" + settings.url);
 });
 
 function delegaLightBox(event) {
-	console.log("evento lightbox");
+	var target = $( event.target ).parent().parent().find("a");
+	console.log("evento lightbox"+target.data("gallery"));
+	console.dir(target);
 					event.preventDefault();
 					return $(this).ekkoLightbox({
+						gallery:target.data("gallery"),
+						gallery_parent_selector:"#protettowipe",
 						onShown: function() {
 							if (window.console) {
 								return console.log('Checking our the events huh?');
@@ -306,7 +311,7 @@ $("#contactForm").submit(function(e) {
             success: function(data, status) {
 				console.log("output:"+data);
                 $("#justdoit").text(data);
-				$("#lurido").text("Please hit me again, I've been a bad buttons");
+				$("#lurido").text("There is hope that your message has been sent");
 				$("#lurido").addClass("disabled");
 				$(".modal").removeClass('in');
             }
