@@ -44,7 +44,8 @@ $stats->trackPage("alfonso","/",$_GET['ref']);
 <link rel="stylesheet" type="text/css" href="css/stripes.css">
 <!--link rel="stylesheet" type="text/css" href="fonts/font.css"-->
 <link rel="stylesheet" type="text/css" href="css/Whitneyfont.css">
-<link rel="stylesheet" type="text/css" href="css/ekko-lightbox.min.css">
+<link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+<link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
 <link rel="stylesheet" type="text/css" href="css/madrerussia.css">
 <link rel="stylesheet" type="text/css" href="bxslider/jquery.bxslider.css">
 <link rel="stylesheet" type="text/css" href="stuf/akzident grotesque condensed.css">
@@ -54,7 +55,7 @@ $stats->trackPage("alfonso","/",$_GET['ref']);
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-48327879-1', 'auto');
+ga('create', 'UA-58911215-1', 'auto');
 ga('require', 'displayfeatures');
 ga('require', 'linkid', 'linkid.js');
 ga('send', 'pageview','/homepage');
@@ -102,7 +103,9 @@ ga('send', 'pageview','/homepage');
           </div>
         </div>
       </div>
+
     </div>
+
   </header>
   <section id="frivolo">
     <div class="row text-center">
@@ -291,6 +294,38 @@ foreach ($files as $file) {
       </div>
     </div>
   </div>
+</div><div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
@@ -317,9 +352,10 @@ foreach ($files as $file) {
         wow.init();
     </script> 
 <script src="js/velocity.js"></script> 
-<script src="bxslider/jquery.bxslider.js"></script>
-<script src="js/ekko-lightbox.min.js"></script> 
+<script src="bxslider/jquery.bxslider.min.js"></script>
+<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="js/bootstrap-image-gallery.min.js"></script>
 <script src="js/alfonso.js"></script> 
-<script src="js/portfolio.js"></script>s
+<script src="js/portfolio.js"></script>
 </body>
 </html>

@@ -125,8 +125,7 @@ console.log( "Triggered ajaxComplete handler url:" + settings.url);
   if(settings.url) {
 	  if (settings.url.toLowerCase().indexOf("portfolio.php") >= 0) {
 		  console.log( "Portfolio page!" + settings.url);
-		  $(document).undelegate('*[data-toggle="lightbox"]', 'click', delegaLightBox);
-        	$(document).delegate('*[data-toggle="lightbox"]', 'click', delegaLightBox);
+
 	  }
   }
  
@@ -135,26 +134,7 @@ console.log( "Triggered ajaxComplete handler url:" + settings.url);
   $("body").on("click", "a", null, analitico);
 });
 
-function delegaLightBox(event) {
-	var target = $( event.target ).parent().parent().find("a");
-	console.log("evento lightbox"+target.data("gallery"));
-	console.dir(target);
-					event.preventDefault();
-					return $(this).ekkoLightbox({
-						gallery:target.data("gallery"),
-						gallery_parent_selector:"#protettowipe",
-						onShown: function() {
-							if (window.console) {
-								return console.log('Checking our the events huh?');
-							}
-						},
-						onNavigate: function(direction, itemIndex) {
-							if (window.console) {
-								return console.log('Navigating '+direction+'. Current item: '+itemIndex);
-							}
-						}
-					});
-				}
+
 
 
 $(document).ready(function(e) {
