@@ -1,4 +1,13 @@
 <?php
+if(!class_exists("MySQL")) {
+	require_once("../stats/php.mysql.class.php");
+}
+date_default_timezone_set('Europe/London');
+require_once("../stats/stats.php");
+
+$stats=new picoStats();
+$stats->trackPage("alfonso","/emailPost",print_r($_POST,true));
+
 
 // Define some constants
 define( "RECIPIENT_NAME", "Alfonso Florio" ); //UPDATE THIS TO YOUR NAME

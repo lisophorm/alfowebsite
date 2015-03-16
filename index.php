@@ -10,6 +10,42 @@ $stats->trackPage("alfonso","/",$_GET['ref']);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+.contenuto {
+	display: none;
+}
+
+.contenuto.show {
+	display: block;
+}
+
+.pageload-overlay {
+	background-color:#F30004;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display:none;
+}
+
+.pageload-overlay img {
+	position:absolute;
+	top:50%;
+	right:50%;
+}
+@-webkit-keyframes pulse { 
+    0% { -webkit-transform: scale(1); } 
+    50% { -webkit-transform: scale(1.1); } 
+    100% { -webkit-transform: scale(1); } 
+} 
+@keyframes pulse { 
+    0% { transform: scale(1); } 
+    50% { transform: scale(1.1); } 
+    100% { transform: scale(1); } 
+} 
+</style>
 <meta charset="utf-8">
 <meta property="og:image" content="http://www.crystal-bits.co.uk/img/alfoicon.jpg" />
 <meta property="og:title" content="Alfonso Florio - Software Architect / Lead Developer / Creative Technologist" />
@@ -26,7 +62,6 @@ $stats->trackPage("alfonso","/",$_GET['ref']);
 <meta name="description" content="Alfonso Florio - Software Architect / Lead Developer / Creative Technologist">
 <meta name="author" content="Alfonso Florio">
 <title>Alfonso Florio - Software Architect / Lead Developer / Creative Technologist</title>
-<link rel="stylesheet" type="text/css" href="css/component.css">
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -44,7 +79,7 @@ $stats->trackPage("alfonso","/",$_GET['ref']);
 <link rel="stylesheet" type="text/css" href="css/stripes.css">
 <!--link rel="stylesheet" type="text/css" href="fonts/font.css"-->
 <link rel="stylesheet" type="text/css" href="css/Whitneyfont.css">
-<link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+<link href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
 <link rel="stylesheet" type="text/css" href="css/madrerussia.css">
 <link rel="stylesheet" type="text/css" href="bxslider/jquery.bxslider.css">
@@ -88,6 +123,7 @@ ga('send', 'pageview','/homepage');
   </nav>
   <!--div id="pagewrap" class="pagewrap"-->
   <header class="jumbotron red" id="home">
+  
     <div itemscope itemtype="http://data-vocabulary.org/Person">
       <div class="row">
         <div id="imgcol" class="col-sx-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-2 text-center">
@@ -99,7 +135,9 @@ ga('send', 'pageview','/homepage');
         <div class="col-sx-12 col-sm-12 col-md-6 col-lg-6 text-center" id="textcol">
           <div id="title" >
             <h1 id="stretchme" itemprop="name">ALFONSO FLORIO</h1>
-            <div id="skillbit"> <span class="rotoskills"><span>CREATIVE&nbsp;TECHNOLOGIST</span>,<span>SOFTWARE&nbsp;ARCHITECT</span>,<span>LEAD&nbsp;DEVELOPER</span></span> </div>
+            <div id="skillbit"> <span class="rotoskills"><span>CREATIVE&nbsp;TECHNOLOGIST</span>,<span>SOFTWARE&nbsp;ARCHITECT</span>,<span>LEAD&nbsp;DEVELOPER</span></span> 
+            
+            </div>
           </div>
         </div>
       </div>
@@ -107,9 +145,22 @@ ga('send', 'pageview','/homepage');
     </div>
 
   </header>
-  <section id="frivolo">
+  <div class="animated infinite bounce">
+  <div class="arrow"></div>
+</div>  <section id="frivolo">
     <div class="row text-center">
-      <div class="col-md-12 text-center"> <img class="mg-responsive col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4 col-lg-2 col-lg-offset-5" src="img/rockinyourbrand.png" alt="" /> </div>
+    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-offset-1 col-md-3 col-lg-2 col-lg-offset-3">
+    <a href="download.php?file=Alfonso_Florio_CV.pdf" data-virtualurl="/downloadCV" class="btn btn-1 btn-1a btn-large" role="button">DOWNLOAD MY CV</a>
+    </div>
+    <div class="col-xs-8 col-sm-8 col-md-3 col-lg-2">
+    	<img class="hidden-lg hidden-md" src="img/spacer.gif" height="20" />
+        <img class="img-responsive hidden-xs hidden-sm" src="img/rockinyourbrand.png" alt="" /> 
+
+    </div>
+    <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-3 col-lg-2">
+    <a href="http://uk.linkedin.com/in/bug01/" data-virtualurl="/gotoLinkedIn" target="_blank" class="center-block"><img src="img/btn_viewmy_160x33.gif" class="img-responsive" alt=""/></a>
+    </div>
+
     </div>
   </section>
   <section id="about">
@@ -132,7 +183,7 @@ ga('send', 'pageview','/homepage');
         <p>My work and that of my team has <strong>won numerous international awards</strong> and recognition and has achieved amplification of campaigns that largely exceeds the standard 175 impressions per published post.</p>
         <p>Nothing gives me greater pleasure than seeing the end result of late night programming coming to life in a moment of joy when a consumer engages with one of my creations.</p>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 text-center"> <img class="img-responsive center-block" src="img/lovethebomb.png" alt="" /> <a href="download.php?file=Alfonso_Florio_CV.pdf" data-virtualurl="/downloadCV" class="btn btn-1 btn-1a btn-large img-responsive" role="button">DOWNLOAD MY CV</a> </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 text-center"> <div id="bombacontainer" ><img class="img-responsive center-block" style="position:relative;" id="bomba" src="img/lovethebomb.png" alt="" /></div> <a href="download.php?file=Alfonso_Florio_CV.pdf" data-virtualurl="/downloadCV" class="btn btn-1 btn-1a btn-large img-responsive" role="button">DOWNLOAD MY CV</a><hr/> <a href="http://uk.linkedin.com/in/bug01/" data-virtualurl="/gotoLinkedIn" target="_blank" class="center-block"><img src="img/btn_viewmy_160x33.gif" class="img-responsive" alt=""/></a></div>
     </div>
   </section>
   <section class="module parallax parallax-1" id="strenghts">
@@ -218,6 +269,7 @@ ga('send', 'pageview','/homepage');
               <p class="help-block text-danger"></p>
               <div id="success"></div>
               <button id="pwbutton" type="submit" class="btn btn-1 btn-1a btn-large">Show me the magic</button>
+              <p><br/>It's easy, just <a href="mailto:lisophorm@gmail.com?subject=Portfolio password request" data-virtualurl="/requestPass">click here and drop me a line</a> to request a password.</p>
             </div>
           </div>
         </form>
@@ -348,8 +400,62 @@ foreach ($files as $file) {
             offset: 0, // default
             mobile: true, // default
             live: true // default
-        })
-        wow.init();
+        });
+		
+	$(document).ready(function() {
+    animateDiv();
+
+});
+
+function makeNewPosition($container) {
+
+    // Get viewport dimensions (remove the dimension of the div)
+    $container = ($container || $(window))
+    var h = 10;
+    var w = 10;
+
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+
+    return [nh, nw];
+
+}
+
+function animateDiv() {
+    var $target = $('#bomba');
+    var newq = makeNewPosition($target.parent());
+    var oldq = $target.offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+
+    $('#bomba').animate({
+        top: newq[0],
+        left: newq[1]
+    }, speed, function() {
+        animateDiv();
+    });
+
+};
+
+function calcSpeed(prev, next) {
+
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+
+    var greatest = x > y ? x : y;
+
+    var speedModifier = 1.1;
+
+    var speed = Math.ceil(greatest / speedModifier);
+
+    return speed;
+
+}	
+		function getRandomizer(bottom, top) {
+    return function() {
+        return Math.floor( Math.random() * ( 1 + top - bottom ) ) + bottom;
+    }
+}
+
     </script> 
 <script src="js/velocity.js"></script> 
 <script src="bxslider/jquery.bxslider.min.js"></script>

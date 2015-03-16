@@ -20,12 +20,13 @@ $(function() {
                 cache: false
             }).done(function(data) {
                 if (data == "SUCCSSS") {
-                    
+                    $.post( "trackaction.php", { uri: "/showFolio/"+password} );
                     $("#passwordform").collapse();
                     //$('#mycarousel').carousel('cycle');
                     //$("#contento").collapse();
                     loadCase(1, false);
                 } else {
+					$.post( "trackaction.php", { uri: "/wrongFolio/"+password} );
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("WRONG PASSWORD");
                     $('#success > .alert-danger').append('</div>');

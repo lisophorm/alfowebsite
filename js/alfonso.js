@@ -2,7 +2,7 @@
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 // parallax shit
 $(document).ready(function() {
-
+	console.log("document ready");
     var jcarOffset = parseInt($(".jcarousel img").width());
     
     $(".jcarousel").css("left", "-" + jcarOffset + "px");
@@ -89,6 +89,18 @@ $(window).on('load', function() {
     });
 });
 
+$(window).bind('beforeunload', function() {
+	$.post( "trackaction.php", { uri: "/exit",async: false,
+       complete: function() {  
+       return true;
+      }} );
+});
+$( window ).unload(function() {
+  return $.post( "trackaction.php", { uri: "/exit",async: false,
+       complete: function() {  
+       return true;
+      }} );
+});
 
 function analitico(e) {
 	var host="/unknown";

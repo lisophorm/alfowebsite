@@ -97,9 +97,20 @@ $htmlfile = glob(GetSQLValueString($colname_getcase, "int")."/*.{htm,html}", GLO
 $dom = new DOMDocument;
 $dom->loadHTMLFile($htmlfile[0]);
 $bodycopy = $dom->getElementsByTagName('p');
+
+ foreach($dom->getElementsByTagName('a') as $link) { 
+        $links[] = array('url' => $link->getAttribute('href'), 'text' => $link->nodeValue); 
+		$ciao=array_pop( $links);
+		$body.='<button class="btn btn-3 btn-3c icon-heart-2">Favorite</button>';
+		$body.="<a class=\"btn btn-1 lightboxlink\" data-toggle=\"lightbox\" data-gallery=\"gallery_".$ciao['url']."\" href=\"http://www.youtube.com/watch?v=".$ciao['url']."\" title=\"LES TWINS - An Industry Ahead\" type=\"text/html\" data-youtube=\"".$ciao['url']."\" poster=\"http://img.youtube.com/vi/".$ciao['url']."/0.jpg\" data-virtualurl=\"/portfolio/video/".$ciao['url']."\"><i class=\"fa fa-video-camera\"></i> Watch Video</a>";
+		
+
+
+    } 
 foreach ($bodycopy as $p) {
         $body.="<p>".$p->nodeValue."</p>";
 }
+$body=str_ireplace("#caseid#",$colname_getcase,$body);
 
 $h3 = $dom->getElementsByTagName('h3');
 $h4 = $dom->getElementsByTagName('h4');
@@ -108,7 +119,7 @@ header('Content-Type: text/html;charset=UTF-8');
 <div class="row">
   <div class="col-md-12">
     <div class="caseheader">
-      <h3>
+      <h3><a class="thumbnail center-all" href="https://www.youtube.com/watch?v=GuwadDAB0L8" data-youtube="GuwadDAB0L8" data-poster="http://img.youtube.com/vi/GuwadDAB0L8/0.jpg" data-type="text/html" data-virtualurl="/portfolio/">WATCH THE VIDEO</a>
         <?php foreach ($h3 as $p) {
         echo $p->nodeValue;
 }	 ?>
