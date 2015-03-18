@@ -148,16 +148,16 @@ ga('send', 'pageview','/homepage');
   <div class="animated infinite bounce">
   <div class="arrow"></div>
 </div>  <section id="frivolo">
-    <div class="row text-center">
-    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-offset-1 col-md-3 col-lg-2 col-lg-offset-3">
+    <div class="row">
+    <div class="col-xs-10 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-offset-2 col-md-3 col-lg-2 col-lg-offset-3 vertical-center">
     <a href="download.php?file=Alfonso_Florio_CV.pdf" data-virtualurl="/downloadCV" class="btn btn-1 btn-1a btn-large" role="button">DOWNLOAD MY CV</a>
     </div>
-    <div class="col-xs-8 col-sm-8 col-md-3 col-lg-2">
+    <div class="col-xs-8 col-sm-8 col-md-2 col-lg-2 col-lg-offset-0 vertical-center">
     	<img class="hidden-lg hidden-md" src="img/spacer.gif" height="20" />
         <img class="img-responsive hidden-xs hidden-sm" src="img/rockinyourbrand.png" alt="" /> 
 
     </div>
-    <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-3 col-lg-2">
+    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 col-md-offset-0 col-md-3 col-lg-2 col-lg-offset-0 vertical-center">
     <a href="http://uk.linkedin.com/in/bug01/" data-virtualurl="/gotoLinkedIn" target="_blank" class="center-block"><img src="img/btn_viewmy_160x33.gif" class="img-responsive" alt=""/></a>
     </div>
 

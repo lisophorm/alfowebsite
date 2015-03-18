@@ -293,8 +293,9 @@ section.module.parallax-4 {
 	background-image: url(../img/red.png);
 }
 .vertical-center {
-	display: table;
-	height: 100%;
+display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
 .container .row .col-lg-6 {
 	float: none;

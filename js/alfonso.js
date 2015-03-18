@@ -135,12 +135,15 @@ console.log( "Triggered ajaxComplete handler url:" + settings.url);
 
 
   if(settings.url) {
-	  if (settings.url.toLowerCase().indexOf("portfolio.php") >= 0) {
+	  if (settings.url.indexOf("portfolio.php") >= 0) {
 		  console.log( "Portfolio page!" + settings.url);
 
+	  } else if(settings.url.indexOf("trackaction.php") >= 0) {
+		  console.log( "Just tracking stuff" + settings.url);
+		  return true;
 	  }
   }
- 
+ console.log( "Body on OFF" + settings.url);
   $("body").off("click", "a", null, analitico);
   
   $("body").on("click", "a", null, analitico);

@@ -79,6 +79,8 @@ cache/
 # IntelliJ
 out/
 
+videos/
+
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
